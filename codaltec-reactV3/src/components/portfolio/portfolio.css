@@ -1,0 +1,194 @@
+.portafolio__header {
+	background-image: url(../../../public/assets/LinxPonal.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 250px;
+	padding-top: 47.5px;
+	padding-bottom: 50px;
+}
+.portafolio__header .container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	height: 100%;
+}
+.portafolio__header article {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 5px;
+	border-radius: 4px;
+}
+.portafolio__header h1 {
+	font-family: 'CenturyBOLD';
+	font-size: 4.8rem;
+	color: white;
+	line-height: 1;
+}
+.portafolio__content {
+	background-image: url('../../../public/assets/BG_Lineas-de-Negocio.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 10px 0px 30px;
+	min-height: 85vh;
+}
+.portafolio__content-article {
+	display: grid;
+	grid-template-columns: 1fr 2px 350px;
+	align-items: center;
+	padding: 20px 0px;
+	gap: 10px;
+}
+.portafolio__content-article h2 {
+	font-family: 'CenturyBOLD';
+	font-size: 4rem;
+	color: var(--yellow);
+	text-align: center;
+}
+.portafolio__content-article > span {
+	background-color: white;
+	width: 2px;
+	height: 100%;
+}
+.portafolio__content-article h3 {
+	font-family: 'CenturyBOLD';
+	font-size: 3.2rem;
+	line-height: 1;
+	text-align: center;
+	color: #5a5a5a;
+}
+.portafolio__content-article h3 span {
+	font-family: 'CenturyBOLD';
+	font-size: 4rem;
+}
+.portafolio__content ul {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.portafolio__content ul li:nth-child(odd) {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 170px 1fr 300px;
+	gap: 20px;
+}
+.portafolio__content ul li:nth-child(even) {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 300px 1fr 170px;
+	gap: 20px;
+}
+.portafolio__content ul li article {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	padding: 15px;
+	background-color: var(--black);
+	color: white;
+	border-radius: 8px;
+}
+.portafolio__content ul li article p {
+	text-align: justify;
+	font-size: 1.4rem;
+}
+
+.portafolio__content .bussines__cards {
+	height: 170px;
+	background-color: var(--yellow);
+	color: var(--black);
+}
+.portafolio__content ul li:nth-child(odd) .bussines__cards {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.portafolio__content ul li:nth-child(even) .bussines__cards {
+	grid-column-start: 3;
+	grid-column-end: 4;
+}
+.portafolio__content ul li iframe {
+	border-radius: 8px;
+}
+.portafolio__content ul li:nth-child(odd) iframe {
+	grid-column-start: 3;
+	grid-column-end: 4;
+}
+.portafolio__content ul li:nth-child(even) iframe {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+}
+@media (max-width: 1050px) {
+	.container {
+		padding: 0px 16px;
+	}
+	.portafolio__header {
+		background-image: none;
+		background-color: var(--black);
+		height: auto;
+		padding-bottom: 0px;
+	}
+	.portafolio__header h1 {
+		font-size: 4rem;
+		color: var(--yellow);
+	}
+	.portafolio__header article {
+		background-color: transparent;
+	}
+	.portafolio__header .container {
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.portafolio__content-article {
+		padding: 0px 0px 20px 0px;
+		grid-template-columns: 1fr;
+	}
+	.portafolio__content-article h2 {
+		text-align: left;
+		font-size: 2rem;
+		color: white;
+	}
+	.portafolio__content-article > span {
+		width: 40%;
+		height: 2px;
+		background-color: var(--yellow);
+	}
+	.portafolio__content ul li iframe {
+		display: none;
+	}
+	.portafolio__content ul li {
+		background-color: #444444;
+		padding: 10px;
+		border-radius: 8px;
+	}
+	.portafolio__content ul li:nth-child(odd) {
+		align-items: flex-start;
+		grid-template-columns: 120px 1fr;
+		gap: 20px;
+	}
+	.portafolio__content ul li:nth-child(even) {
+		align-items: flex-start;
+		grid-template-columns: 1fr 120px;
+		gap: 20px;
+	}
+	.portafolio__content ul li:nth-child(even) .bussines__cards {
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+	.portafolio__content ul li:nth-child(even) article {
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+	.portafolio__content ul li article {
+		background-color: transparent;
+		padding: 0px;
+	}
+	.portafolio__content .bussines__cards {
+		font-size: 1.4rem;
+		height: 115px;
+		padding: 10px;
+	}
+	.portafolio__content .bussines__img {
+		width: 50px;
+		height: 50px;
+	}
+}

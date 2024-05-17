@@ -1,0 +1,63 @@
+.financial {
+	background-color: var(--black);
+	padding: 100px 0px 60px 0px;
+	min-height: 85vh;
+}
+.financial h1 {
+	font-family: CenturyBOLD;
+	font-size: 4.8rem;
+	color: white;
+	line-height: 1;
+}
+.financial__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.financial__top a {
+	display: flex;
+	align-items: center;
+	max-width: 200px;
+}
+.financial__top a svg {
+	font-size: 4rem;
+	color: var(--yellow);
+}
+.financial__top a p {
+	font-family: CenturyBOLD;
+	font-size: 2rem;
+	color: var(--yellow);
+}
+.financial__down {
+	margin-top: 40px;
+}
+.financial__down ul {
+	display: grid;
+	gap: 20px;
+}
+.financial__down ul li {
+	background-color: rgb(79, 79, 79);
+	padding: 20px;
+}
+.financial__down ul li a {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.financial__down ul li a > div {
+	display: flex;
+}
+.financial__down ul li a > div svg {
+	font-size: 2rem;
+	color: white;
+	margin-right: 10px;
+}
+.financial__down ul li a p {
+	font-size: 1.4rem;
+	color: white;
+}
+.financial__down ul li a .rigth {
+	justify-content: flex-end;
+}
+.financial__down ul li a .rigth p {
+	color: var(--yellow);
+}

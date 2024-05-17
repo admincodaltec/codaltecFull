@@ -1,0 +1,76 @@
+.internal {
+	background-color: var(--black);
+	padding: 100px 0px 60px 0px;
+	min-height: 85vh;
+}
+.internal h1 {
+	font-family: CenturyBOLD;
+	font-size: 4.8rem;
+	color: white;
+	line-height: 1;
+}
+.internal__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.internal__top a {
+	display: flex;
+	align-items: center;
+	max-width: 200px;
+}
+.internal__top a svg {
+	font-size: 4rem;
+	color: var(--yellow);
+}
+.internal__top a p {
+	font-family: CenturyBOLD;
+	font-size: 2rem;
+	color: var(--yellow);
+}
+.internal__down {
+	margin-top: 40px;
+}
+.internal__down ul {
+	display: grid;
+	gap: 20px;
+}
+.internal__down ul li {
+	background-color: rgb(79, 79, 79);
+	padding: 20px;
+}
+.internal__down ul li.headTable {
+	background-color: transparent;
+}
+.internal__down ul li.headTable p {
+	text-align: center;
+	font-size: 2rem;
+	color: white;
+}
+.internal__down ul li.headTable .center {
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+}
+.internal__down ul li.headTable,
+.internal__down ul li a {
+	display: grid;
+	grid-template-columns: 1fr 200px 1fr;
+	gap: 10px;
+}
+.internal__down ul li a > div {
+	display: flex;
+}
+.internal__down ul li a > div svg {
+	font-size: 2rem;
+	color: white;
+	margin-right: 10px;
+}
+.internal__down ul li a p {
+	font-size: 1.4rem;
+	color: white;
+}
+.internal__down ul .center p,
+.internal__down ul .left {
+	text-align: center;
+	justify-content: center;
+}

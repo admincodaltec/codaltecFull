@@ -1,0 +1,117 @@
+.transparency {
+	background-image: url('../../../public/assets/BG_Lineas-de-Negocio.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 100px 0px 60px;
+	min-height: 85vh;
+}
+.transparency h1 {
+	font-family: CenturyBOLD;
+	font-size: 4.8rem;
+	color: white;
+	line-height: 1;
+}
+.transparency__article {
+	padding: 10px;
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.6);
+	margin: 20px 0px;
+	color: white;
+}
+.transparency__article p {
+	font-size: 1.4rem;
+}
+.transparencyItems__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.transparencyItems__top h2 {
+	font-size: 2.4rem;
+	font-family: CenturyBOLD;
+	color: antiquewhite;
+}
+.transparencyItems__top h2 svg {
+	color: var(--yellow);
+	font-size: 3.2rem;
+}
+.transparencyItems__top span {
+	display: block;
+	width: 80%;
+	height: 4px;
+	background-color: rgb(79, 79, 79);
+	border-radius: 4px;
+}
+.transparencyItems__down {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(3, 300px);
+	gap: 50px;
+	margin-top: 30px;
+}
+.transparency__item {
+	background-color: rgb(79, 79, 79);
+	border-radius: 8px;
+	transition: all 0.3s;
+}
+.transparency__item:hover {
+	transform: scale(1.02);
+}
+.transparency__item-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: var(--yellow);
+	width: 100%;
+	min-height: 72px;
+	padding: 10px;
+	border-radius: 8px 8px 0px 0px;
+}
+.transparency__item-header h3 {
+	font-size: 3.2rem;
+	font-family: CenturyBOLD;
+	color: var(--black);
+	line-height: 0.8;
+}
+.transparency__item-body {
+	position: relative;
+	padding: 20px 20px 40px 20px;
+}
+.transparency__item-body article p {
+	text-align: justify;
+	font-size: 1.4rem;
+	color: white;
+}
+.transparency__item-body span {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	font-style: italic;
+	font-size: 1.4rem;
+	color: var(--yellow);
+}
+@media (max-width: 1000px) {
+	.transparencyItems__down {
+		grid-template-columns: 1fr;
+	}
+	.transparencyItems__top span {
+		display: none;
+	}
+}
+@media (max-width: 800px) {
+	.transparency h1 {
+		font-size: 3.2rem;
+		margin-bottom: 20px;
+	}
+	.transparency__article {
+		display: none;
+	}
+	.transparencyItems__top h2 {
+		font-size: 1.8rem;
+	}
+	.transparencyItems__top h2 svg {
+		font-size: 2rem;
+	}
+}
