@@ -4,8 +4,12 @@ services:
   front:
     container_name: front-web
     restart: unless-stopped
-    image: node
+    build:
+      context: .
+      dockerfile: Dockerfile-frontend
     working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
     stdin_open: true
     tty: true
     ports: 
@@ -14,15 +18,21 @@ services:
       - ./app/frontend:/home/node/app
     command: >
       bash -c "npm install
-      npm start"
+                npm run build
+                npm run start"
     networks:
       - net-portal
 
   back:
     container_name: back-web
     restart: unless-stopped
-    image: node
+    build:
+      context: .
+      dockerfile: Dockerfile-backend
+    user: "node"
     working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
     stdin_open: true
     tty: true
     ports: 
@@ -31,7 +41,9 @@ services:
       - ./app/backend:/home/node/app
     command: >
       bash -c "npm install
-      next start"
+      npm audit fix
+      next build
+      npm start"
     networks:
       - net-portal
 
