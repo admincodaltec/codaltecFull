@@ -28,7 +28,7 @@ function HeaderWelcome() {
 				</div>
 				<div className='container'>
 					<div className='header__welcome-title'>
-						<h1>SELECCIONE SU IDIOMA / SELECT YOUR LENGUAGE</h1>
+						<h1>SELECCIONE SU IDIOMA / SELECT YOUR LANGUAGE</h1>
 						<i className='fa-solid fa-caret-right'></i>
 					</div>
 					<div className='header__welcome-btn'>

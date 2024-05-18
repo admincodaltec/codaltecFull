@@ -21,7 +21,7 @@ export default function Welcome() {
 					<div className='grid grid-cols-6 gap-5 container mx-auto '>
 						<div className='flex items-center col-span-4'>
 							<h1 className='text-2xl text-white tracking-wide'>
-								SELECCIONE SU IDIOMA / SELECT YOUR LENGUAGE
+								SELECCIONE SU IDIOMA / SELECT YOUR LANGUAGE
 							</h1>
 							<i className='fa-solid fa-caret-right' />
 						</div>
