@@ -1,0 +1,39 @@
+name: portal-web
+
+services:
+  front:
+    container_name: front-web
+    restart: unless-stopped
+    image: node
+    working_dir: /home/node/app
+    stdin_open: true
+    tty: true
+    ports: 
+      - 8001:3000
+    volumes:
+      - ./app/frontend:/home/node/app
+    command: >
+      bash -c "npm install
+      npm start"
+    networks:
+      - net-portal
+
+  back:
+    container_name: back-web
+    restart: unless-stopped
+    image: node
+    working_dir: /home/node/app
+    stdin_open: true
+    tty: true
+    ports: 
+      - 8002:3000
+    volumes:
+      - ./app/backend:/home/node/app
+    command: >
+      bash -c "npm install
+      next start"
+    networks:
+      - net-portal
+
+networks:
+  net-portal:
