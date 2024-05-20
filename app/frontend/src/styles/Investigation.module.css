@@ -1,0 +1,13 @@
+.investigation__content {
+    background-image: url('../../public/assets/BG_Lineas-de-Negocio.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.investigationSecond__content {
+    background-image: url('../../public/assets/BG_lineas.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

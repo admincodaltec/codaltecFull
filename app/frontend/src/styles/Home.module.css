@@ -1,0 +1,41 @@
+.bussines {
+	background-image: url('../../public/assets/BG_Lineas-de-Negocio.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 40px 0px;
+}
+
+.bussines__container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 100%;
+	gap: 20px;
+}
+
+.bussines__container_left {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+.posts {
+	background-color: #202020;
+	padding: 40px 0px;
+}
+
+.posts__container {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	gap: 20px;
+	min-height: 280px;
+}
+
+.bussines__container_right {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	height: 100%;
+}
