@@ -1,2 +1,3 @@
 .DS_Store
 app/db/mysql
+.cache
