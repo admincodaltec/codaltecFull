@@ -1,3 +1,6 @@
 .DS_Store
 app/db/mysql
 .cache
+app/env.back
+app/env.db
+app/env.front

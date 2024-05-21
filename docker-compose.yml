@@ -10,20 +10,10 @@ services:
     depends_on:
       - back
     working_dir: /home/node/app
-    environment:
-      - NODE_ENV=dev
-      - PORT=3000
-      - DB_USER=root
-      - DB_PASSWORD=c0d4lt3c
-      - DB_HOST=db-web
-      - DB_NAME=codaltec
-      - DB_PORT=3306
-      - MAIL_NODEMAILER=nforero@codaltec.com
-      - PASS_NODEMAILER=dvcg vvpx gaas btsh
+    env_file:
+      - ./app/env.front
     stdin_open: true
     tty: true
-    ports: 
-      - 8001:3000
     volumes:
       - ./app/frontend:/home/node/app
     command: >
@@ -42,20 +32,10 @@ services:
       - db
     user: "node"
     working_dir: /home/node/app
-    environment:
-      - NODE_ENV=dev
-      - PORT=3000
-      - DB_USER=root
-      - DB_PASSWORD=c0d4lt3c
-      - DB_HOST=db-web
-      - DB_NAME=codaltec
-      - DB_PORT=3306
-      - MAIL_NODEMAILER=nforero@codaltec.com
-      - PASS_NODEMAILER=dvcg vvpx gaas btsh
+    env_file:
+      - ./app/env.back
     stdin_open: true
     tty: true
-    ports: 
-      - 8002:3000
     volumes:
       - ./app/backend:/home/node/app
     command: >
@@ -70,13 +50,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-db
-    environment:
-      - MYSQL_ROOT_PASSWORD=c0d4lt3c
-      - MYSQL_DATABASE=codaltec
+    env_file:
+      - ./app/env.db
     stdin_open: true
     tty: true
-    ports: 
-      - 3306:3306
     volumes:
       - ./app/db/migrations:/docker-entrypoint-initdb.d
       - ./app/db/mysql:/var/lib/mysql
