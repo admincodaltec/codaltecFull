@@ -7,9 +7,19 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-frontend
+    depends_on:
+      - back
     working_dir: /home/node/app
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=dev
+      - PORT=3000
+      - DB_USER=root
+      - DB_PASSWORD=c0d4lt3c
+      - DB_HOST=db-web
+      - DB_NAME=codaltec
+      - DB_PORT=3306
+      - MAIL_NODEMAILER=nforero@codaltec.com
+      - PASS_NODEMAILER=dvcg vvpx gaas btsh
     stdin_open: true
     tty: true
     ports: 
@@ -17,8 +27,8 @@ services:
     volumes:
       - ./app/frontend:/home/node/app
     command: >
-      bash -c "npm install
-                npm run start"
+      bash -c "yarn install
+                npm run dev"
     networks:
       - net-portal
 
@@ -28,10 +38,20 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-backend
+    depends_on:
+      - db
     user: "node"
     working_dir: /home/node/app
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=dev
+      - PORT=3000
+      - DB_USER=root
+      - DB_PASSWORD=c0d4lt3c
+      - DB_HOST=db-web
+      - DB_NAME=codaltec
+      - DB_PORT=3306
+      - MAIL_NODEMAILER=nforero@codaltec.com
+      - PASS_NODEMAILER=dvcg vvpx gaas btsh
     stdin_open: true
     tty: true
     ports: 
@@ -41,6 +61,39 @@ services:
     command: >
       bash -c "yarn install
                 npm run dev"
+    networks:
+      - net-portal
+
+  db:
+    container_name: db-web
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=c0d4lt3c
+      - MYSQL_DATABASE=codaltec
+    stdin_open: true
+    tty: true
+    ports: 
+      - 3306:3306
+    volumes:
+      - ./app/db/migrations:/docker-entrypoint-initdb.d
+      - ./app/db/mysql:/var/lib/mysql
+    networks:
+      - net-portal
+
+  proxy:
+    container_name: proxy-web
+    restart: unless-stopped
+    image: nginx
+    volumes:
+      - ./app/proxy:/etc/nginx
+    ports:
+      - "18080:80"
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
     networks:
       - net-portal
 

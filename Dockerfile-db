@@ -1,5 +1,4 @@
-FROM node:18
+FROM mysql:8.0-debian
 RUN apt update
 RUN apt upgrade -y
-RUN npm install -g npm
 RUN apt clean all
