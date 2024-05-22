@@ -1,40 +1,17 @@
-'use client';
-
-import {useEffect, useState} from 'react';
+import {Metadata} from 'next';
 import HeaderHome from '@/layouts/HeaderHome';
 import BannerHeader from '@/components/home/BannerHeader';
 import FooterHome from '@/layouts/FooterHome';
 import styles from '@/styles/Posts.module.css';
-import PostItem from '@/components/home/PostItem';
+import PostsSection from '@/layouts/PostsSection';
 
-interface Article {
-	urlToImage: string;
-	title: string;
-}
+export const metadata: Metadata = {
+	title: 'Noticias',
+	description:
+		'Últimas noticias y acontecimientos de interés nacional e internacional referentes a CODALTEC.',
+};
 
 export default function Posts() {
-	const [news, setNews] = useState<Article[]>([]);
-
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const response = await fetch(
-					'https://newsapi.org/v2/top-headlines?country=us&apiKey=3349874d9bfe4e1bb0a0341166b279ad'
-				);
-				if (!response.ok) {
-					throw new Error('Network response was not ok');
-				}
-				const data = await response.json();
-				setNews(data.articles);
-				console.log(data.articles);
-			} catch (error) {
-				console.error('Error fetching data:', error);
-			}
-		};
-
-		fetchData();
-	}, []);
-
 	return (
 		<>
 			<HeaderHome />
@@ -49,18 +26,7 @@ export default function Posts() {
 							</h2>
 							<span className='w-[2px] h-full bg-white' />
 						</article>
-						<ul className={`${styles.posts__content}`}>
-							{news.map((article, index) => (
-								<PostItem
-									// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-									key={index}
-									uri={`${index}`}
-									image={article.urlToImage}
-									title={article.title}
-									isFirst={index === 0}
-								/>
-							))}
-						</ul>
+						<PostsSection ulClassName={`${styles.posts__content}`} />
 					</div>
 				</section>
 			</main>

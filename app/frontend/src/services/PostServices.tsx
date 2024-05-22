@@ -1,9 +1,10 @@
 import {useState, useEffect} from 'react';
 
 export interface Post {
-	urlToImage: string;
-	title: string;
-	// Otras propiedades de los posts
+	id: number;
+	image: string;
+	esTitle: string;
+	esDescription: string;
 }
 
 export function useGetPosts() {
@@ -15,15 +16,16 @@ export function useGetPosts() {
 		const fetchData = async () => {
 			try {
 				const response = await fetch(
-					'https://newsapi.org/v2/top-headlines?country=us&apiKey=3349874d9bfe4e1bb0a0341166b279ad'
+					'http://localhost:8002/api/v1/news'
+					// 'https://newsapi.org/v2/top-headlines?country=us&apiKey=3349874d9bfe4e1bb0a0341166b279ad'
 				);
 				if (!response.ok) {
 					throw new Error('Network response was not ok');
 				}
 				const data = await response.json();
-				setPosts(data.articles);
+				setPosts(data);
 				setIsLoading(false);
-				console.log('MONDA', data);
+				console.log('POSTS: ', data);
 			} catch (error) {
 				setError('Error fetching data');
 				setIsLoading(false);

@@ -27,6 +27,9 @@ const options = {
 };
 app.use(cors(options));
 
+app.use('/backend/public/images', express.static('./public/images'));
+app.use('/backend/public/documents', express.static('./public/documents'));
+
 app.get('/', (req, res) => {
   res.send('Server ON!');
 });
@@ -37,9 +40,6 @@ app.use(logErrors);
 app.use(ormErrorHandler);
 app.use(boomErrorHandler);
 app.use(errorHandler);
-
-app.use('/public/images', express.static('./public/images'));
-app.use('/public/documents', express.static('./public/documents'));
 
 app.listen(port, () => {
   console.log('Mi port ' + port);
