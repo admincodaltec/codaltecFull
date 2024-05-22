@@ -1,8 +1,7 @@
 'use client';
 
-import {useGetPosts} from '@/services/PostServices';
+import {useGetPostById} from '@/services/PostsServices';
 import styles from '@/styles/Post.module.css';
-import {useEffect, useState} from 'react';
 
 interface PostProps {
 	params: {
@@ -10,30 +9,18 @@ interface PostProps {
 	};
 }
 
-interface Article {
-	image: string;
-	esTitle: string;
-	createdAt: string;
-	esDescription: string;
-}
+export default function Post({params}: PostProps) {
+	const id = parseInt(params.slug, 10); // Asume que el slug es un ID numérico
+	const {post, isLoading, error} = useGetPostById(id);
 
-export default function PostSection({params}: PostProps) {
-	const {posts, isLoading, error} = useGetPosts();
-	const [news, setNews] = useState<Article[]>([]);
-	const [post, setPost] = useState<Article>();
-	const [dataLoaded, setDataLoaded] = useState(false);
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-	useEffect(() => {
-		if (posts) {
-			const index = parseInt(params.slug, 10);
-			if (index >= 0 && index < news.length) {
-				const postActual = news[index];
-				setPost(postActual);
-			} else {
-				console.error('El índice está fuera del rango del array');
-			}
-		}
-	}, [dataLoaded, params.slug, news]);
+	if (isLoading) {
+		return <div>Loading...</div>;
+	}
+
+	if (error) {
+		return <div>{error}</div>;
+	}
+
 	return (
 		<>
 			<section className={styles.post__banner}>
@@ -52,7 +39,7 @@ export default function PostSection({params}: PostProps) {
 					</p>
 				</div>
 			</section>
-			<section className='min-h-[400px] bg-[#2A2A2A]'>
+			<section className={styles.post__content}>
 				<div className='container py-5'>
 					<article className='text-white'>
 						<p>{post?.esDescription}</p>

@@ -1,7 +1,7 @@
 'use client';
 
 import PostItem from '@/components/home/PostItem';
-import {useGetPosts} from '@/services/PostServices';
+import {useGetPosts} from '@/services/PostsServices';
 import {FadeLoader} from 'react-spinners';
 
 interface PostsSectionProps {
