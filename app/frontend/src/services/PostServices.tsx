@@ -16,7 +16,7 @@ export function useGetPosts() {
 		const fetchData = async () => {
 			try {
 				const response = await fetch(
-					'http://localhost:8002/api/v1/news'
+					process.env.NEXT_PUBLIC_API_URL + 'news'
 					// 'https://newsapi.org/v2/top-headlines?country=us&apiKey=3349874d9bfe4e1bb0a0341166b279ad'
 				);
 				if (!response.ok) {

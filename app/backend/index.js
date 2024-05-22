@@ -30,7 +30,7 @@ app.use(cors(options));
 app.use('/backend/public/images', express.static('./public/images'));
 app.use('/backend/public/documents', express.static('./public/documents'));
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('Server ON!');
 });
 
