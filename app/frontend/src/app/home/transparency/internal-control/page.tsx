@@ -1,7 +1,13 @@
 import HeaderHome from '@/layouts/HeaderHome';
+import InternalsSection from '@/layouts/InternalsSection';
 import FooterHome from '@/layouts/FooterHome';
 import BannerHeader from '@/components/home/BannerHeader';
 import styles from '@/styles/Transparency.module.css';
+import {Metadata} from 'next';
+
+export const metadata: Metadata = {
+	title: 'Control Interno',
+};
 
 export default function InternalControl() {
 	return (
@@ -21,19 +27,7 @@ export default function InternalControl() {
 							<h2>SOPORTE</h2>
 						</div>
 					</div>
-					<ul className='body py-4'>
-						<li className='grid grid-cols-3 p-2'>
-							<div className='text-white px-4 text-center'>
-								<p>Control interno Nuúmero uno</p>
-							</div>
-							<div className='text-white px-4 text-center'>
-								<p>32/02/2024</p>
-							</div>
-							<div className='text-white px-4 text-center'>
-								<p>nombre_archivo.pdf</p>
-							</div>
-						</li>
-					</ul>
+					<InternalsSection />
 				</section>
 			</main>
 			<FooterHome />
