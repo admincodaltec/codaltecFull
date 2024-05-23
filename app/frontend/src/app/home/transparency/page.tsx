@@ -4,6 +4,11 @@ import HeaderHome from '@/layouts/HeaderHome';
 import CardTransparency from '@/components/home/CardTransparency';
 import {FaCaretDown} from 'react-icons/fa';
 import styles from '@/styles/Transparency.module.css';
+import {Metadata} from 'next';
+
+export const metadata: Metadata = {
+	title: 'Transparencia',
+};
 
 export default function Transparency() {
 	return (
