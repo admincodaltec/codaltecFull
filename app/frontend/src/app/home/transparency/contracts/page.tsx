@@ -1,7 +1,13 @@
 import HeaderHome from '@/layouts/HeaderHome';
+import ContractsSection from '@/layouts/ContractsSection';
 import FooterHome from '@/layouts/FooterHome';
 import BannerHeader from '@/components/home/BannerHeader';
 import styles from '@/styles/Transparency.module.css';
+import {Metadata} from 'next';
+
+export const metadata: Metadata = {
+	title: 'Contratos',
+};
 
 export default function Contracts() {
 	return (
@@ -19,39 +25,18 @@ export default function Contracts() {
 					</p>
 					<div className='header grid grid-cols-3 border-b border-white pb-2'>
 						<div className='title text-center text-white text-2xl font-semibold'>
-							<h2>AÑO</h2>
-						</div>
-						<div className='title text-center text-white text-2xl font-semibold'>
 							<h2>NOMBRE</h2>
 						</div>
 						<div className='title text-center text-white text-2xl font-semibold'>
-							<h2>DESCARGAR</h2>
+							<h2>AÑO</h2>
+						</div>
+						<div className='title text-center text-white text-2xl font-semibold'>
+							<h2>SOPORTE - DESCARGAR</h2>
 						</div>
 					</div>
-					<ul className='body py-4 min-w-[550px] overflow-x-hidden'>
-						<li className='grid grid-cols-3 p-2'>
-							<div className='text-white px-4 text-center'>
-								<p>Control interno Nuúmero uno</p>
-							</div>
-							<div className='text-white px-4 text-center'>
-								<p>32/02/2024</p>
-							</div>
-							<div className='text-white px-4 text-center'>
-								<p>nombre_archivo.pdf</p>
-							</div>
-						</li>
-						<li className='grid grid-cols-3 p-2'>
-							<div className='text-white px-4 text-center'>
-								<p>Control interno Nuúmero uno</p>
-							</div>
-							<div className='text-white px-4 text-center'>
-								<p>32/02/2024</p>
-							</div>
-							<div className='text-white px-4 text-center'>
-								<p>nombre_archivo.pdf</p>
-							</div>
-						</li>
-					</ul>
+					<div className='body py-4 min-w-[550px] overflow-x-hidden'>
+						<ContractsSection />
+					</div>
 				</section>
 			</main>
 			<FooterHome />

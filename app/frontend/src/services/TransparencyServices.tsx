@@ -15,6 +15,14 @@ export interface Financial {
 	createdAt: string;
 }
 
+export interface Contract {
+	id: number;
+	purpose: string;
+	date: string;
+	file: string;
+	createdAt: string;
+}
+
 export function useGetInternalControl() {
 	const [internalsControl, setInternalsControl] = useState<InternalControl[]>([]);
 	const [isLoading, setIsLoading] = useState(true);
@@ -71,4 +79,33 @@ export function useGetFinancial() {
 	}, []);
 
 	return {financials, isLoading, error};
+}
+
+export function useGetContract() {
+	const [contracts, setContracts] = useState<Contract[]>([]);
+	const [isLoading, setIsLoading] = useState(true);
+	const [error, setError] = useState<string>('');
+
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}contract`);
+				if (!response.ok) {
+					throw new Error('Network response was not ok');
+				}
+				const data = await response.json();
+				setContracts(data);
+				setIsLoading(false);
+				console.log('CONTRACTS: ', data);
+			} catch (error) {
+				setError('Error fetching data');
+				setIsLoading(false);
+				console.log(error);
+			}
+		};
+
+		fetchData();
+	}, []);
+
+	return {contracts, isLoading, error};
 }

@@ -10,11 +10,11 @@ const date = Joi.string();
 const file = Joi.string();
 
 const createContractSchema = Joi.object({
-  processNumber: processNumber.required(),
-  processType: processType.required(),
-  state: state.required(),
+  processNumber: processNumber,
+  processType: processType,
+  state: state,
   purpose: purpose.required(),
-  amount: amount.required(),
+  amount: amount,
   date: date.required(),
   file: file.required(),
 });
