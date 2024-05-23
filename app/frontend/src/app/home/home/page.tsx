@@ -1,50 +1,23 @@
-'use client';
-
 import Link from 'next/link';
 import HeaderHome from '@/layouts/HeaderHome';
 import FooterHome from '@/layouts/FooterHome';
-import SliderItem from '@/components/home/SliderItem';
 import styles from '@/styles/Home.module.css';
 import {FaChevronRight} from 'react-icons/fa';
+import PostsSection from '@/layouts/PostsSection';
+import SlidersSection from '@/layouts/SlidersSection';
 import {Metadata} from 'next';
 
-import PostsSection from '@/layouts/PostsSection';
-
-import Slider from 'react-slick';
-
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+export const metadata: Metadata = {
+	title: 'Inicio',
+};
 
 export default function Home() {
-	const settings = {
-		dots: false,
-		fade: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		autoplay: true,
-		autoplaySpeed: 3500,
-		pauseOnHover: false,
-	};
-
 	return (
 		<>
 			<HeaderHome />
 			<main>
 				<section className='h-screen '>
-					<Slider {...settings} className='overflow-x-hidden'>
-						<SliderItem
-							image={'/assets/expociencia-meta.jpeg'}
-							title={'Esto es un testeo para el primer slider'}
-							description={'Ahoasdasd asda sd a'}
-						/>
-						<SliderItem
-							image={'/assets/CAPACITACION_BC.jpg'}
-							title={'Capacitación dada por NASA'}
-							description={'Ahoasdasd asda sd a'}
-						/>
-					</Slider>
+					<SlidersSection />
 				</section>
 				<section className={styles.bussines}>
 					<div className={`${styles.bussines__container} container mx-auto h-full`}>

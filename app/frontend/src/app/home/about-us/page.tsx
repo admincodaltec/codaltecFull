@@ -6,7 +6,7 @@ import {FaChevronRight} from 'react-icons/fa';
 import {Metadata} from 'next';
 
 export const metadata: Metadata = {
-	title: 'About Us',
+	title: 'Nosotros',
 };
 
 export default function Aboutus() {
