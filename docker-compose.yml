@@ -80,8 +80,6 @@ services:
   adminer:
     image: adminer
     restart: unless-stopped
-    ports:
-      - 18081:8080
     networks:
       - net-portal
 
