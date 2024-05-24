@@ -75,35 +75,30 @@ export default function AboutusMore() {
 							name={'CR NILSSEN JANETH GUTIÉRREZ SUÁREZ'}
 							position={'Gerente General'}
 							address={'Carrera 38 No. 25B - 27 Pisos 3 - 4'}
-							phone={'+57 310 212 2021'}
 							city={'Bogotá D.C. Colombia'}
 						/>
 						<DirectivesItem
 							name={'MY GUSTAVO ANDRÉS GONZALEZ CASTAÑEDA'}
 							position={'Director Dirección de Producción y Desarrollo'}
 							address={'Carrera 38 No. 25B - 27 Pisos 3 - 4'}
-							phone={'(1) 755 7352'}
 							city={'Bogotá D.C. Colombia'}
 						/>
 						<DirectivesItem
 							name={'CT IVAN CAMILO CALIXTO RODRIGUEZ'}
 							position={'Director Comercial'}
 							address={'Carrera 38 No. 25B - 27 Pisos 3 - 4'}
-							phone={'(1) 755 7352'}
 							city={'Bogotá D.C. Colombia'}
 						/>
 						<DirectivesItem
 							name={'YOLANDA PARRA GUACANEME'}
 							position={'Directora Dirección de Inventigación'}
 							address={'Avenida 40 No. 24A - 71'}
-							phone={'(8) 684 8764'}
 							city={'Villavicencio - Meta'}
 						/>
 						<DirectivesItem
 							name={'GABRIEL ANDRES RUIZ MORALES'}
 							position={'Director Administrativo y Financiera'}
 							address={'Carrera 38 No. 25B - 27 Pisos 3 - 4'}
-							phone={'+57 313 324 7921'}
 							city={'Bogotá D.C. Colombia'}
 						/>
 					</ul>

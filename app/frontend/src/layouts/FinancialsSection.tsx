@@ -20,12 +20,18 @@ export default function FinancialsSection() {
 			) : (
 				<ul className='body py-4'>
 					{financials.map((item, index) => (
-						<li className='grid grid-cols-2 p-2'>
+						<li className='grid grid-cols-2 py-2' key={index}>
 							<div className='text-white px-4 text-center'>
 								<p>{item.name}</p>
 							</div>
 							<div className='text-white px-4 text-center'>
-								<a download={item.file} />
+								<a
+									className='text-yellow-500 underline'
+									href={`${process.env.NEXT_PUBLIC_HOST_URL}/backend/public/documents/${item.file}`}
+									download={item.file}
+								>
+									{item.file}
+								</a>
 							</div>
 						</li>
 					))}

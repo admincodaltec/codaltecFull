@@ -47,7 +47,8 @@ export default function SlidersSection() {
 				<Slider {...settings} className='overflow-x-hidden'>
 					{sliders.map((item, index) => (
 						<SliderItem
-							image={'/assets/expociencia-meta.jpeg'}
+							key={index}
+							image={`${process.env.NEXT_PUBLIC_HOST_URL}/backend/public/images/${item.image}`}
 							title={item.esTitle}
 							description={item.esDescription}
 						/>

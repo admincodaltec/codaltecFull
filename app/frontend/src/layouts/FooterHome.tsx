@@ -26,10 +26,8 @@ export default function FooterHome() {
 					title={'DIRECCIÓN'}
 					content={
 						<>
-							<p>Oficina Principal: Cra 38 # 25B - 27, Piso 3 - 4, Bogotá - Colombia</p> <br />
-							<p>
-								Oficina Villavicencio: Avenida 40 No. 24A - 71 Tercer piso, Villavicencio - Meta
-							</p>
+							<p>Oficina Principal: Bogotá (Carrera 38 No. 25B - 27 Pisos 3 - 4)</p> <br />
+							<p>Oficina Secundaria: Villavicencio (Avenida 40 No. 24A - 71 Piso 3) </p>
 						</>
 					}
 				/>
@@ -40,33 +38,33 @@ export default function FooterHome() {
 						<div className='flex gap-2'>
 							<a
 								className='text-xl'
-								href='https://twitter.com/i/flow/login?redirect_after_login=%2Fcodaltec'
-								rel='noreferrer'
+								href='https://x.com/Codaltec/'
 								target='_blank'
+								rel='noreferrer'
 							>
 								<FaXTwitter />
 							</a>
 							<a
 								className='text-xl'
-								href='https://www.facebook.com/codaltec'
-								rel='noreferrer'
+								href='https://www.facebook.com/codaltec/'
 								target='_blank'
+								rel='noreferrer'
 							>
 								<FaFacebook />
 							</a>
 							<a
 								className='text-xl'
-								href='https://www.instagram.com/codaltec/?igshid=mipxwbvoqzc2&hl=es-la'
-								rel='noreferrer'
+								href='https://www.instagram.com/codaltec/'
 								target='_blank'
+								rel='noreferrer'
 							>
 								<FaInstagram />
 							</a>
 							<a
 								className='text-xl'
-								href='https://www.youtube.com/channel/UC9WLtbwdkANGHAr33KnW6pw'
-								rel='noreferrer'
+								href='https://www.youtube.com/@CODALTEC_Corp/videos'
 								target='_blank'
+								rel='noreferrer'
 							>
 								<FaYoutube />
 							</a>

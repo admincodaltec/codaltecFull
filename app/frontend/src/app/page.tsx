@@ -95,16 +95,36 @@ export default function Welcome() {
 							title={'SIGUENOS'}
 							content={
 								<div className='flex gap-2'>
-									<a className='text-xl' href='/' target='_blank' rel='noreferrer'>
+									<a
+										className='text-xl'
+										href='https://x.com/Codaltec/'
+										target='_blank'
+										rel='noreferrer'
+									>
 										<FaXTwitter />
 									</a>
-									<a className='text-xl' href='/' target='_blank' rel='noreferrer'>
+									<a
+										className='text-xl'
+										href='https://www.facebook.com/codaltec/'
+										target='_blank'
+										rel='noreferrer'
+									>
 										<FaFacebook />
 									</a>
-									<a className='text-xl' href='/' target='_blank' rel='noreferrer'>
+									<a
+										className='text-xl'
+										href='https://www.instagram.com/codaltec/'
+										target='_blank'
+										rel='noreferrer'
+									>
 										<FaInstagram />
 									</a>
-									<a className='text-xl' href='/' target='_blank' rel='noreferrer'>
+									<a
+										className='text-xl'
+										href='https://www.youtube.com/@CODALTEC_Corp/videos'
+										target='_blank'
+										rel='noreferrer'
+									>
 										<FaYoutube />
 									</a>
 								</div>

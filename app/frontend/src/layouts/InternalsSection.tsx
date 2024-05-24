@@ -20,7 +20,7 @@ export default function InternalsSection() {
 			) : (
 				<ul className='body py-4'>
 					{internalsControl.map((item, index) => (
-						<li className='grid grid-cols-3 p-2'>
+						<li className='grid grid-cols-3 py-2' key={index}>
 							<div className='text-white px-4 text-center'>
 								<p>{item.name}</p>
 							</div>
@@ -28,7 +28,13 @@ export default function InternalsSection() {
 								<p>{item.date}</p>
 							</div>
 							<div className='text-white px-4 text-center'>
-								<a download={item.file} />
+								<a
+									className='text-yellow-500 underline'
+									href={`${process.env.NEXT_PUBLIC_HOST_URL}/backend/public/documents/${item.file}`}
+									download={item.file}
+								>
+									{item.file}
+								</a>
 							</div>
 						</li>
 					))}
