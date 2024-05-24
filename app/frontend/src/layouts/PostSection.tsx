@@ -27,7 +27,7 @@ export default function Post({params}: PostProps) {
 				<img
 					className={styles.post__image}
 					src={
-						`http://localhost:8002/backend/public/images/${post?.image}` ||
+						`{process.env.HOST_URL}/backend/public/images/${post?.image}` ||
 						'/assets/codaltec-icon.PNG'
 					}
 					alt={post?.esTitle}
