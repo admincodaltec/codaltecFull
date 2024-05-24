@@ -15,7 +15,7 @@ export default function Welcome() {
 							src='/assets/Logos/Codaltec_B.svg'
 							width={200}
 							height={100}
-							alt='CODALTEC | Corporación de Alta Técnologia Logo'
+							alt='CODALTEC | Corporación de Alta Tecnología Logo'
 						/>
 					</div>
 					<div className='grid grid-cols-6 gap-5 container mx-auto '>
@@ -135,59 +135,6 @@ export default function Welcome() {
 						/>
 					</div>
 				</section>
-				{/* <section className="footerBlack__mobile">
-          <div className="container">
-            <a href="tel:">
-              
-            </a>
-            <span></span>
-            <a href="mailto:">
-              
-            </a>
-            <span></span>
-            <div className="footerBlack__follow-mobile">
-              <p>SIGUENOS:</p>
-              <ul>
-                <li>
-                  <a
-                    href="https://twitter.com/codaltec"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.facebook.com/codaltec"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/codaltec/?igshid=mipxwbvoqzc2&hl=es-la"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/channel/UC9WLtbwdkANGHAr33KnW6pw"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section> */}
 			</footer>
 		</div>
 	);
