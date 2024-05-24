@@ -12,6 +12,7 @@ services:
     working_dir: /home/node/app
     env_file:
       - ./app/env.front
+      - ./app/env.global
     stdin_open: true
     tty: true
     volumes:
@@ -34,6 +35,7 @@ services:
     working_dir: /home/node/app
     env_file:
       - ./app/env.back
+      - ./app/env.global
     stdin_open: true
     tty: true
     volumes:
@@ -52,6 +54,7 @@ services:
       dockerfile: Dockerfile-db
     env_file:
       - ./app/env.db
+      - ./app/env.global
     stdin_open: true
     tty: true
     volumes:

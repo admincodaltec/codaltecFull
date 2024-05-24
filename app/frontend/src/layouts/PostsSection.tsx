@@ -35,7 +35,7 @@ const PostsSection: React.FC<PostsSectionProps> = ({maxPostsToShow, ulClassName}
 							key={article.id}
 							uri={`${article.id}`}
 							image={
-								`http://localhost:8002/backend/public/images/${article.image}` ||
+								`{process.env.HOST_URL}/backend/public/images/${article.image}` ||
 								'/assets/codaltec-icon.PNG'
 							}
 							title={article.esTitle}
@@ -50,7 +50,7 @@ const PostsSection: React.FC<PostsSectionProps> = ({maxPostsToShow, ulClassName}
 							key={article.id}
 							uri={`${article.id}`}
 							image={
-								`http://localhost:8002/backend/public/images/${article.image}` ||
+								`{process.env.HOST_URL}/backend/public/images/${article.image}` ||
 								'/assets/codaltec-icon.PNG'
 							}
 							title={article.esTitle}
