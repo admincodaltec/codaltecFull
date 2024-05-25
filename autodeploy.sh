@@ -16,7 +16,7 @@ cd "$PROYECTO_DIR"
 git_output=$(/usr/bin/git pull origin)
 
 # Verificar si hay actualizaciones
-if [[ "$git_output" == *"Already up to date."* || "$git_output" == *"actualizado"* ]]; then
+if [[ "$git_output" == *"Already "* || "$git_output" == *"actualizado"* ]]; then
     # No hay cambios en el repositorio remoto
     echo "No se encontraron cambios en el repositorio remoto."
 else
