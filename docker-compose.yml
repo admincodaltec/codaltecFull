@@ -31,7 +31,6 @@ services:
       dockerfile: Dockerfile-backend
     depends_on:
       - db
-    user: "node"
     working_dir: /home/node/app
     env_file:
       - ./app/env.back
