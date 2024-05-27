@@ -84,13 +84,7 @@ El contenedor *adminer* expone una aplicación web en: https://localhost:18081
 
 ## Topología:
 
-QA:
-
-![QA](topology-ports-QA.png)
-
-Producción:
-
-![Producción](topology-ports-Prod.png)
+![Topología de contenedores](topology.png)
 
 ## Configuración Nginx:
 
