@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import React from 'react';
+import styles from '@/styles/PortfolioItem.module.css';
 
 interface PortfolioItem {
 	image: string;
@@ -7,26 +7,25 @@ interface PortfolioItem {
 	description: string;
 }
 
-const DirectivesItem: React.FC<PortfolioItem> = ({ image, title, description }) => {
+const DirectivesItem: React.FC<PortfolioItem> = ({image, title, description}) => {
 	return (
 		<li>
-			<Link
-				className="relative grid grid-rows-[32px_1fr] gap-4 p-6 rounded-xl shadow-xl"
-				href={'/example'}
-				style={{
-					boxShadow: '7px 7px 14px rgba(0, 0, 0, 0.2), -7px -7px 10px rgba(255, 255, 255, 0.05)',
-				}}
-			>
-				<picture className="flex justify-center items-center">
-					<img className="object-contain w-8 h-8" src={`/assets/${image}`} alt={title} />
-				</picture>
-				<div className="flex flex-col">
-					<p className="text-yellow-500 text-lg text-center mb-1">
+			<div className={`relative cursor-pointer rounded-xl shadow-xl h-96  ${styles.card}`}>
+				<div className={`${styles.card__sides} ${styles.card__sides_front} bg-yellow-500`}>
+					<picture className={`${styles.card__figure}`}>
+						<img className='object-contain w-full h-full rounded-lg' src={image} alt={title} />
+					</picture>
+					<p className='text-black text-2xl text-center mb-1'>
 						<strong>{title}</strong>
 					</p>
-					<p className="text-sm text-white text-center">{description}</p>
 				</div>
-			</Link>
+				<div className={`${styles.card__sides} ${styles.card__sides_back} bg-[#272727] `}>
+					<p className='text-yellow-500 text-2xl text-center mb-1'>
+						<strong>{title}</strong>
+					</p>
+					<p className='text-sm text-white text-justify'>{description}</p>
+				</div>
+			</div>
 		</li>
 	);
 };

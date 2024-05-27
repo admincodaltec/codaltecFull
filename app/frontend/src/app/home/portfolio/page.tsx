@@ -1,8 +1,12 @@
 import FooterHome from '@/layouts/FooterHome';
 import HeaderHome from '@/layouts/HeaderHome';
 import BannerHeader from '@/components/home/BannerHeader';
-import styles from '@/styles/Portfolio.module.css';
-import PortfolioItem from '@/components/home/PortfolioItem';
+import PortafolioSection from '@/layouts/PortafolioSection';
+import {Metadata} from 'next';
+
+export const metadata: Metadata = {
+	title: 'Portafolio',
+};
 
 export default function Portfolio() {
 	return (
@@ -20,36 +24,7 @@ export default function Portfolio() {
 							</h3>
 						</article>
 						<div className='py-4'>
-							<ul className='grid grid-cols-3 gap-12 px-6'>
-								<PortfolioItem
-									image={'organigrama_codaltec.jpg'}
-									title={'Testeo de producto'}
-									description={
-										'Consequat non sunt occaecat cupidatat aliqua laborum consectetur ipsum duis deserunt. Consequat laboris in velit pariatur excepteur. Veniam eiusmod et voluptate commodo elit non. Reprehenderit exercitation minim adipisicing qui Lorem et sunt. Quis proident velit pariatur laborum dolor voluptate minim aliqua labore aliqua proident officia cupidatat.'
-									}
-								/>
-								<PortfolioItem
-									image={'organigrama_codaltec.jpg'}
-									title={'Testeo de producto'}
-									description={
-										'Consequat non sunt occaecat cupidatat aliqua laborum consectetur ipsum duis deserunt. Consequat laboris in velit pariatur excepteur. Veniam eiusmod et voluptate commodo elit non. Reprehenderit exercitation minim adipisicing qui Lorem et sunt. Quis proident velit pariatur laborum dolor voluptate minim aliqua labore aliqua proident officia cupidatat.'
-									}
-								/>
-								<PortfolioItem
-									image={'organigrama_codaltec.jpg'}
-									title={'Testeo de producto'}
-									description={
-										'Consequat non sunt occaecat cupidatat aliqua laborum consectetur ipsum duis deserunt. Consequat laboris in velit pariatur excepteur. Veniam eiusmod et voluptate commodo elit non. Reprehenderit exercitation minim adipisicing qui Lorem et sunt. Quis proident velit pariatur laborum dolor voluptate minim aliqua labore aliqua proident officia cupidatat.'
-									}
-								/>
-								<PortfolioItem
-									image={'organigrama_codaltec.jpg'}
-									title={'Testeo de producto'}
-									description={
-										'Consequat non sunt occaecat cupidatat aliqua laborum consectetur ipsum duis deserunt. Consequat laboris in velit pariatur excepteur. Veniam eiusmod et voluptate commodo elit non. Reprehenderit exercitation minim adipisicing qui Lorem et sunt. Quis proident velit pariatur laborum dolor voluptate minim aliqua labore aliqua proident officia cupidatat.'
-									}
-								/>
-							</ul>
+							<PortafolioSection />
 						</div>
 					</div>
 				</section>

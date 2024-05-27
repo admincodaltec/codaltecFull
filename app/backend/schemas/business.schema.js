@@ -10,7 +10,7 @@ const enDescription = Joi.string().min(16);
 
 const createBusinessSchema = Joi.object({
   icon: icon.required(),
-  youtube: youtube.required(),
+  youtube: youtube,
   esName: esName.required(),
   enName: enName.required(),
   esDescription: esDescription.required(),
