@@ -1,6 +1,10 @@
 import type {Metadata} from 'next';
-import {Montserrat} from 'next/font/google';
-import '../styles/globals.css';
+import { Montserrat } from 'next/font/google';
+
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
+
+import '../../styles/globals.css';
 
 const inter = Montserrat({subsets: ['latin']});
 
@@ -16,10 +20,19 @@ export const metadata: Metadata = {
 		'Entidad Pública, de Derecho Privado, Sin Ánimo de Lucro, cuyo objeto social es el desarrollo, promoción y realización de actividades de ciencia, tecnología e innovación.',
 };
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default async function RootLayout({
+	children,
+	params: {locale}
+  }: {
+	children: React.ReactNode;
+	params: {locale: string};
+	}) {
+		const messages = await getMessages();
 	return (
-		<html>
+		<html lang={locale}>
+			<NextIntlClientProvider messages={messages}>
 			<body className={inter.className}>{children}</body>
+			</NextIntlClientProvider>
 		</html>
 	);
 }

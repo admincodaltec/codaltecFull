@@ -18,6 +18,7 @@ const NavItem: React.FC<NavItemProps> = ({name, link, subItems}) => {
 			<Link
 				className='flex items-center h-full text-white text-center text-xs transition duration-300 ease-in-out hover:text-yellow-500'
 				href={link}
+				locale='en'
 			>
 				<p className='text-center'>{name}</p>
 			</Link>

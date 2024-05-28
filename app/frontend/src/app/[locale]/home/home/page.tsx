@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css';
 import {FaChevronRight} from 'react-icons/fa';
 import PostsSection from '@/layouts/PostsSection';
 import SlidersSection from '@/layouts/SlidersSection';
+import {useTranslations} from 'next-intl';
 import {Metadata} from 'next';
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+	const t = useTranslations('')
 	return (
 		<>
 			<HeaderHome />

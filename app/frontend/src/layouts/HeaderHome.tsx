@@ -5,9 +5,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/HeaderHome.module.css';
 import NavItem from '../components/home/NavItem';
+import {useTranslations, useLocale} from 'next-intl';
 import {FaLanguage} from 'react-icons/fa6';
 
 export default function HeaderHome() {
+	const tHeader = useTranslations('header')
 	const [languageMenuVisible, setLanguageMenuVisible] = useState(false);
 
 	const toggleLanguageMenu = () => {
@@ -29,25 +31,21 @@ export default function HeaderHome() {
 									/>
 								</Link>
 							</li>
-							<NavItem name={'Home'} link={'/home/home'} />
+							<NavItem name={tHeader('inicio')} link={'/home/home'} />
 							<NavItem
-								name={'Nosotros'}
+								name={tHeader('nosotros')}
 								link={'/home/about-us'}
 								subItems={[
-									{name: 'Nuestros Inicios', link: '/home/about-us/more#nuestros-inicios'},
-									{name: 'Organigrama', link: '/home/about-us/more#organigrama'},
-									{name: 'Directivos', link: '/home/about-us/more#directivos'},
+									{name: tHeader('nuestrosInicios'), link: '/home/about-us/more#nuestros-inicios'},
+									{name: tHeader('organigrama'), link: '/home/about-us/more#organigrama'},
+									{name: tHeader('directivos'), link: '/home/about-us/more#directivos'},
 								]}
 							/>
-							<NavItem name={'Portafolio'} link={'/home/portfolio'} />
+							<NavItem name={tHeader('portafolio')} link={'/home/portfolio'} />
 							<NavItem name={'Noticias'} link={'/home/posts'} />
 							<NavItem
 								name={'Centro de Investigación'}
 								link={'/home/investigation'}
-								// subItems={[
-								// 	{ name: 'GIDS', link: 'www.google.com' },
-								// 	{ name: 'KTEG', link: '/subitem2' },
-								// ]}
 							/>
 							<NavItem
 								name={'Transparencia'}
