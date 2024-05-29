@@ -4,6 +4,7 @@ import {FaXTwitter} from 'react-icons/fa6';
 import {FaFacebook} from 'react-icons/fa';
 import {FaInstagram} from 'react-icons/fa';
 import {FaYoutube} from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function Welcome() {
 	return (
@@ -27,7 +28,10 @@ export default function Welcome() {
 						</div>
 						<div className='flex gap-3 items-center justify-evenly col-span-2'>
 							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-							<button className='flex flex-col justify-center items-center w-48 bg-transparent outline-none border-none cursor-pointer'>
+							<Link
+								href={'/es/home/home'}
+								className='flex flex-col justify-center items-center w-48 bg-transparent outline-none border-none cursor-pointer'
+							>
 								<h4 className='text-lg text-yellow-600 tracking-[.35rem]'>BIENVENIDO</h4>
 								<Image
 									className='my-2'
@@ -37,10 +41,13 @@ export default function Welcome() {
 									alt='CODALTEC | Corporación de Alta Técnologia Logo'
 								/>
 								<h3 className='text-xl text-white'>ESPAÑOL</h3>
-							</button>
+							</Link>
 							<span className='w-0.5 h-[100%] bg-white' />
 							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-							<button className='flex flex-col justify-center items-center w-48 bg-transparent outline-none border-none cursor-pointer'>
+							<Link
+								href={'/en/home/home'}
+								className='flex flex-col justify-center items-center w-48 bg-transparent outline-none border-none cursor-pointer'
+							>
 								<h4 className='text-lg text-yellow-600 tracking-[.35rem]'>WELCOME</h4>
 								<Image
 									className='my-2'
@@ -50,7 +57,7 @@ export default function Welcome() {
 									alt='CODALTEC | Corporación de Alta Técnologia Logo'
 								/>
 								<h3 className='text-xl text-white'>ENGLISH</h3>
-							</button>
+							</Link>
 						</div>
 					</div>
 				</section>

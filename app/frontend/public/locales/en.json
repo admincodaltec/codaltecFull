@@ -16,8 +16,8 @@
 		"atention": "Customer Service"
 	},
 	"productsHome": {
-		"productos&servicios": "PRODUCTS AND SERVICES",
-		"productsDescription": "In this section you will find the portfolio of products and services that our corporation has at the service of our country.",
+		"productos&servicios": "BUSINESS LINES",
+		"productsDescription": "In this section you will find the portfolio of products and services that our corporation makes available, driving technological development and innovation in our country. Explore our advanced solutions and discover how we are transforming various sectors with cutting-edge technology.",
 		"productsBusiness": "LINES OF BUSINESS",
 		"productsLink": "KNOW OUR CAPABILITIES"
 	},
@@ -39,8 +39,8 @@
 		"organigrama": "CODALTEC ORGANIZATION CHART",
 		"estructura": "Codaltec internal structure",
 		"directivos": "MANAGEMENT",
-		"sedePrincipal": "BOGOTÁ - HEAD OFFICE (Career 50 No. 15-35)",
-		"sedeVillavicencio": "VILLAVICENCIO (Avenue  40 No. 24A - 71)"
+		"sedePrincipal": "Main Office: Bogotá (Carrera 38 No. 25B - 27 Floors 3 - 4)",
+		"sedeVillavicencio": "Secondary Office: Villavicencio (Avenida 40 No. 24A - 71 Piso 3) "
 	},
 	"moreAboutUs": {
 		"iniciosDescription": "The Corporación de Alta Tecnología para la Defensa - CODALTEC, was born from the need of the Defense Sector to promote the development of capabilities in technological areas to create its own solutions, supporting the operational environment of the Public Force and the productive system of the country. It is a public entity, of private law, non-profit, whose corporate purpose is the development, promotion and implementation of science, technology and innovation activities. It was created on December 7, 2012 and its Founding Members were: The Ministry of National Defense, the Colombian Military Industry - INDUMIL, the Colombian Aeronautical Industry Corporation - CIAC S.A., the Government of Meta and the Mayor's Office of Villavicencio. CODALTEC is committed to the development of R&D&I projects that will allow Colombia to obtain the necessary capabilities for the creation of a new industrial fabric based on knowledge and technology, capable of positioning the Defense Sector as a major player in the development of the Colombian economy through investment in education and innovation. CODALTEC started with two bets SIMULATION and SENSORS, among which the following stand out; Simulator for Remotely Manned Aircraft - SIMART, Simulator for Light Armored Troop Carrier Vehicle - MARKAB, Simulator for Single Engine Aircraft Regional / Utility Type, Turboprop - SIMAER, Simulator Unmanned Aerial System for Ground Maneuvering type RAVEN, Radar System, Surface Intrusion Detection Radar - SINDER® and TADER® System, CODALTEC was recognized as an Autonomous Research Center in September 2018 according to Resolution No. 0984 of 2018 of COLCIENCIAS. This makes us actors of the National System of Science Technology and Innovation of Colombia, reaffirming our goal of strengthening the scientific, technological capabilities of the Defense and civilian Sector with dual application technologies.",
@@ -116,6 +116,8 @@
 		"horario": "OPENING HOURS",
 		"horarioDias": "Monday through Friday 8:00 a. m. - 12:00 p. m. 1:00 p. m. - 5:00 p. m.",
 		"direccion": "ADDRESS",
+		"bogota": "Main Office: Bogotá (Carrera 38 No. 25B - 27 Floors 3 - 4)",
+		"villavicencio": "Secondary Office: Villavicencio (Avenida 40 No. 24A - 71 Piso 3) ",
 		"siguenos": "FOLLOW US"
 	},
 	"language": {

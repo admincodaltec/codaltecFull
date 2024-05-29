@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import {useLocale} from 'next-intl';
 
 interface SubItem {
 	name: string;
@@ -13,11 +14,12 @@ interface NavItemProps {
 }
 
 const NavItem: React.FC<NavItemProps> = ({name, link, subItems}) => {
+	const currentLocale = useLocale();
 	return (
 		<li className='group relative py-1 px-3 '>
 			<Link
 				className='flex items-center h-full text-white text-center text-xs transition duration-300 ease-in-out hover:text-yellow-500'
-				href={link}
+				href={`/${currentLocale}/${link}`}
 				locale='en'
 			>
 				<p className='text-center'>{name}</p>
@@ -29,7 +31,7 @@ const NavItem: React.FC<NavItemProps> = ({name, link, subItems}) => {
 						<li className='flex justify-center text-center py-3 px-2' key={index}>
 							<Link
 								className='text-white text-center text-xs leading-3 transition duration-300 ease-in-out hover:text-yellow-500'
-								href={subItem.link}
+								href={`/${currentLocale}/${subItem.link}`}
 							>
 								<p className='text-center'>{subItem.name}</p>
 							</Link>

@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import { Montserrat } from 'next/font/google';
+import {Montserrat} from 'next/font/google';
 
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
@@ -22,16 +22,16 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
 	children,
-	params: {locale}
-  }: {
+	params: {locale},
+}: {
 	children: React.ReactNode;
 	params: {locale: string};
-	}) {
-		const messages = await getMessages();
+}) {
+	const messages = await getMessages();
 	return (
 		<html lang={locale}>
 			<NextIntlClientProvider messages={messages}>
-			<body className={inter.className}>{children}</body>
+				<body className={inter.className}>{children}</body>
 			</NextIntlClientProvider>
 		</html>
 	);

@@ -22,7 +22,6 @@ export function useGetPortafolio() {
 				const data = await response.json();
 				setPortafolios(data);
 				setIsLoading(false);
-				console.log('BUSSINES: ', data);
 			} catch (error) {
 				setError('Error fetching data');
 				setIsLoading(false);

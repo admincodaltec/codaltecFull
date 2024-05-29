@@ -16,8 +16,8 @@
 		"atention": "Atención al Cliente"
 	},
 	"productsHome": {
-		"productos&servicios": "PRODUCTOS Y SERVICIOS",
-		"productsDescription": "En esta sección encontrarás el portafolio de productos y servicios que tiene nuestra corporación al servicio de nuestro país.",
+		"productos&servicios": "LÍNEAS DE NEGOCIOS",
+		"productsDescription": "En esta sección encontrarás el portafolio de productos y servicios que nuestra corporación pone a disposición, impulsando el desarrollo tecnológico y la innovación en nuestro país. Explora nuestras soluciones avanzadas y descubre cómo estamos transformando diversos sectores con tecnología de vanguardia.",
 		"productsBusiness": "LÍNEAS DE NEGOCIOS",
 		"productsLink": "CONOCE NUESTRAS CAPACIDADES"
 	},
@@ -39,8 +39,8 @@
 		"organigrama": "ORGANIGRAMA CODALTEC",
 		"estructura": "Estructura interna Codaltec",
 		"directivos": "DIRECTIVOS",
-		"sedePrincipal": "BOGOTÁ - SEDE PRINCIPAL (Carrera 50 No. 15-35)",
-		"sedeVillavicencio": "VILLAVICENCIO (Avenida 40 No. 24A - 71)"
+		"sedePrincipal": "Oficina Principal: Bogotá (Carrera 38 No. 25B - 27 Pisos 3 - 4)",
+		"sedeVillavicencio": "Oficina Secundaria: Villavicencio (Avenida 40 No. 24A - 71 Piso 3)"
 	},
 	"moreAboutUs": {
 		"iniciosDescription": "La Corporación de Alta Tecnología para la Defensa - CODALTEC, nace de la necesidad Sector Defensa de promover el desarrollo de capacidades en áreas tecnológicas para crear sus propias soluciones, apoyando el ambiente operacional de la Fuerza Pública y el sistema productivo del país. Es una entidad Pública, de Derecho Privado, Sin Ánimo de Lucro, cuyo objeto social es el desarrollo, promoción y realización de actividades de ciencia, tecnología e innovación. Fue creada el 7 de diciembre de 2012 y sus Miembros Fundadores fueron: El Ministerio de Defensa Nacional, la Industria Militar Colombiana - INDUMIL, la Corporación de la Industria Aeronáutica Colombiana - CIAC S.A, la Gobernación de Meta y la Alcaldía de Villavicencio. CODALTEC Está comprometida con el desarrollo de proyectos de I+D+i que le permitan a Colombia obtener las capacidades necesarias para la creación de un nuevo tejido industrial basado en el conocimiento y en la tecnología, capaz de posicionar al Sector Defensa como actor principal para el desarrollo de la economía colombiana a través de la inversión en educación e innovación. CODALTEC inició con dos apuestas SIMULACIÓN y SENSORES, que dentro de ellos se destacan; Simulador para Aeronave Remotamente Tripulado – SIMART, Simulador para el Vehículo Blindado de Transporte de Tropa Ligero - MARKAB, Simulador para Avión Monomotor Tipo Regional / Utilitario, Turbohélice – SIMAER, Simulador Sistema aéreo no tripulado para maniobra terrestre tipo RAVEN, Sistema Radar, Surface Intrusion Detection Radar - SINDER® y Sistema TADER®, CODALTEC fue reconocido como Centro Autónomo de Investigación en septiembre de 2018 según Resolución No. 0984 de 2018 de COLCIENCIAS. Esto nos hace actores del Sistema Nacional de Ciencia Tecnología e Innovación de Colombia, reafirmando nuestro objetivo de fortalecer las capacidades científico, tecnológicas del Sector Defensa y civil con tecnologías de aplicación dual.",
@@ -115,6 +115,8 @@
 		"contacto": "CONTACTO",
 		"horario": "HORARIO DE ATENCIÓN",
 		"horarioDias": "Lunes a Viernes 8:00 a. m. - 12:00 p. m. 1:00 p. m. - 5:00 p. m.",
+		"bogota": "Oficina Principal: Bogotá (Carrera 38 No. 25B - 27 Pisos 3 - 4)",
+		"villavicencio": "Oficina Secundaria: Villavicencio (Avenida 40 No. 24A - 71 Piso 3) ",
 		"direccion": "DIRECCIÓN",
 		"siguenos": "SIGUENOS"
 	},

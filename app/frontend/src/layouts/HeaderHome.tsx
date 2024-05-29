@@ -1,20 +1,41 @@
 'use client';
 
+import {usePathname} from 'next/navigation';
 import React, {useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/HeaderHome.module.css';
 import NavItem from '../components/home/NavItem';
-import {useTranslations, useLocale} from 'next-intl';
+import {useTranslations} from 'next-intl';
 import {FaLanguage} from 'react-icons/fa6';
 
 export default function HeaderHome() {
-	const tHeader = useTranslations('header')
+	const tHeader = useTranslations('header');
+	const tLenguage = useTranslations('language');
+	const currentPath = usePathname();
+
 	const [languageMenuVisible, setLanguageMenuVisible] = useState(false);
 
 	const toggleLanguageMenu = () => {
 		setLanguageMenuVisible(!languageMenuVisible);
 	};
+
+	const switchSpanish = () => {
+		if (currentPath.includes('/en')) {
+			return currentPath.replace('/en', '/es');
+		} else {
+			return currentPath;
+		}
+	};
+
+	const switchEnglish = () => {
+		if (currentPath.includes('/es')) {
+			return currentPath.replace('/es', '/en');
+		} else {
+			return currentPath;
+		}
+	};
+
 	return (
 		<header>
 			<section className={styles.header__content}>
@@ -42,21 +63,18 @@ export default function HeaderHome() {
 								]}
 							/>
 							<NavItem name={tHeader('portafolio')} link={'/home/portfolio'} />
-							<NavItem name={'Noticias'} link={'/home/posts'} />
+							<NavItem name={tHeader('noticias')} link={'/home/posts'} />
+							<NavItem name={tHeader('investigación')} link={'/home/investigation'} />
 							<NavItem
-								name={'Centro de Investigación'}
-								link={'/home/investigation'}
-							/>
-							<NavItem
-								name={'Transparencia'}
+								name={tHeader('transparencia')}
 								link={'/home/transparency'}
 								subItems={[
-									{name: 'Contratación', link: '/home/transparency/contracts'},
-									{name: 'Control Interno', link: '/home/transparency/internal-control'},
-									{name: 'Información Financiera', link: '/home/transparency/financials'},
+									{name: tHeader('contratacion'), link: '/home/transparency/contracts'},
+									{name: tHeader('controlInterno'), link: '/home/transparency/internal-control'},
+									{name: tHeader('financial'), link: '/home/transparency/financials'},
 								]}
 							/>
-							<NavItem name={'Atención al Cliente'} link={'/home/atention-citizen'} />
+							<NavItem name={tHeader('atention')} link={'/home/atention-citizen'} />
 						</ul>
 					</nav>
 					<div className='flex items-center relative'>
@@ -70,9 +88,19 @@ export default function HeaderHome() {
 						{languageMenuVisible && (
 							<div className='flex flex-col gap-1 absolute top-full -left-1/2 transform -translate-x-1/2 bg-black/80 rounded-lg'>
 								{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-								<button className='block w-64 py-1 rounded-lg text-white'>Español</button>
+								<Link
+									href={switchEnglish()}
+									className='block text-center px-3 py-1 rounded-lg text-white transition duration-300 ease-in-out hover:text-yellow-500'
+								>
+									{tLenguage('ingles')}
+								</Link>
 								{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-								<button className='block w-64 py-1 rounded-lg text-white'>Ingles</button>
+								<Link
+									href={switchSpanish()}
+									className='block text-center px-3 py-1 rounded-lg text-white transition duration-300 ease-in-out hover:text-yellow-500'
+								>
+									{tLenguage('español')}
+								</Link>
 							</div>
 						)}
 					</div>

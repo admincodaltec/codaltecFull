@@ -23,7 +23,6 @@ export function useGetSliders() {
 				const data = await response.json();
 				setSliders(data);
 				setIsLoading(false);
-				console.log('SLIDERS: ', data);
 			} catch (error) {
 				setError('Error fetching data');
 				setIsLoading(false);

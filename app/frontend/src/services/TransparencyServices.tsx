@@ -38,7 +38,6 @@ export function useGetInternalControl() {
 				const data = await response.json();
 				setInternalsControl(data);
 				setIsLoading(false);
-				console.log('INTERNALS: ', data);
 			} catch (error) {
 				setError('Error fetching data');
 				setIsLoading(false);
@@ -67,7 +66,6 @@ export function useGetFinancial() {
 				const data = await response.json();
 				setFinancials(data);
 				setIsLoading(false);
-				console.log('INTERNALS: ', data);
 			} catch (error) {
 				setError('Error fetching data');
 				setIsLoading(false);
@@ -96,7 +94,6 @@ export function useGetContract() {
 				const data = await response.json();
 				setContracts(data);
 				setIsLoading(false);
-				console.log('CONTRACTS: ', data);
 			} catch (error) {
 				setError('Error fetching data');
 				setIsLoading(false);

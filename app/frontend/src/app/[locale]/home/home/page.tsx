@@ -13,7 +13,8 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-	const t = useTranslations('')
+	const tProducts = useTranslations('productsHome');
+	const tPosts = useTranslations('postHome');
 	return (
 		<>
 			<HeaderHome />
@@ -24,16 +25,17 @@ export default function Home() {
 				<section className={styles.bussines}>
 					<div className={`${styles.bussines__container} container mx-auto h-full`}>
 						<div className={styles.bussines__container_left}>
-							<h2 className={`${styles} text-3xl font-bold text-yellow-500`}>LÍNEAS DE NEGOCIO</h2>
+							<h2 className={`${styles} text-3xl font-bold text-yellow-500`}>
+								{tProducts('productos&servicios')}
+							</h2>
 							<article className={`${styles} text-lg text-white text-justify`}>
-								En esta sección encontrarás el portafolio de productos y servicios que tiene nuestra
-								corporación al servicio de nuestro país.
+								{tProducts('productsDescription')}
 							</article>
 							<Link
 								className='flex items-center justify-end text-white text-2xl text-end'
 								href={'/home'}
 							>
-								CONOCE NUESTRAS CAPACIDADES <FaChevronRight className='text-yellow-500 text-4xl' />
+								{tProducts('productsLink')} <FaChevronRight className='text-yellow-500 text-4xl' />
 							</Link>
 						</div>
 					</div>
@@ -42,12 +44,12 @@ export default function Home() {
 					<div className={`${styles.posts__container} container mx-auto`}>
 						<div>
 							<h2 className={'text-6xl font-bold text-yellow-500'}>
-								<span className='text-white text-4xl'>ÚLTIMAS</span>
+								<span className='text-white text-4xl'>{tPosts('postHomeTitle1')}</span>
 								<br />
-								NOTICIAS
+								{tPosts('postHomeTitle2')}
 							</h2>
-							<Link className='text-white underline' href={'/home/posts'}>
-								VER MÁS NOTICIAS
+							<Link className='text-white underline' href={'/es/home/home/posts'}>
+								{tPosts('postLink')}
 							</Link>
 						</div>
 						<PostsSection ulClassName={styles.bussines__container_right} maxPostsToShow={3} />

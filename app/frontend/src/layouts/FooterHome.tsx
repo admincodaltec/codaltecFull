@@ -5,35 +5,35 @@ import {FaXTwitter} from 'react-icons/fa6';
 import {FaFacebook} from 'react-icons/fa';
 import {FaInstagram} from 'react-icons/fa';
 import {FaYoutube} from 'react-icons/fa';
+import {useTranslations} from 'next-intl';
 
 export default function FooterHome() {
+	const tFooter = useTranslations('footer');
 	return (
 		<section className={styles.footer__content}>
 			<div className='flex justify-around items-center container mx-auto max-w-4xl'>
 				<FooterCard
-					title={'CONTACTO'}
+					title={tFooter('contacto')}
 					content={'Movil: +57 300 639 8324'}
 					title1={'EMAIL'}
 					content1={'info@codaltec.com'}
 				/>
 				<span className='bg-white w-[2px] h-full' />
-				<FooterCard
-					title={'HORARIO DE ATENCIÓN'}
-					content={'Lunes a Viernes 8:00 a. m. - 12:00 p. m. 1:00 p. m. - 5:00 p. m.'}
-				/>
+				<FooterCard title={tFooter('horario')} content={tFooter('horarioDias')} />
 				<span className='bg-white w-[2px] h-full' />
 				<FooterCard
-					title={'DIRECCIÓN'}
+					title={tFooter('direccion')}
 					content={
 						<>
-							<p>Oficina Principal: Bogotá (Carrera 38 No. 25B - 27 Pisos 3 - 4)</p> <br />
-							<p>Oficina Secundaria: Villavicencio (Avenida 40 No. 24A - 71 Piso 3) </p>
+							<p>{tFooter('bogota')}</p>
+							<br />
+							<p>{tFooter('villavicencio')}</p>
 						</>
 					}
 				/>
 				<span className='bg-white w-[2px] h-full' />
 				<FooterCard
-					title={'SIGUENOS'}
+					title={tFooter('siguenos')}
 					content={
 						<div className='flex gap-2'>
 							<a

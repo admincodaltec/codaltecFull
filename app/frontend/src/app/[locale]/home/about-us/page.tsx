@@ -4,12 +4,16 @@ import FooterHome from '@/layouts/FooterHome';
 import styles from '@/styles/Aboutus.module.css';
 import {FaChevronRight} from 'react-icons/fa';
 import {Metadata} from 'next';
+import {useTranslations} from 'next-intl';
+import {useLocale} from 'next-intl';
 
 export const metadata: Metadata = {
 	title: 'Nosotros',
 };
 
 export default function Aboutus() {
+	const currentLocale = useLocale();
+	const tAboutUs = useTranslations('aboutUs');
 	return (
 		<>
 			<HeaderHome />
@@ -17,12 +21,12 @@ export default function Aboutus() {
 				<section className={styles.aboutus}>
 					<div className={`${styles.aboutus__container} container mx-auto`}>
 						<article className={styles.aboutus__article}>
-							<h1 className='text-3xl font-bold text-end text-yellow-500'>¿QUIENES SOMOS?</h1>
+							<h1 className='text-3xl font-bold text-end text-yellow-500'>
+								{tAboutUs('aboutUsTitle')}
+							</h1>
 							<div className={styles.aboutus__article_text}>
 								<p className='text-white text-base text-justify'>
-									Somos una Entidad Pública, de Derecho Privado, Sin Ánimo de Lucro, cuyo objeto
-									social es el desarrollo, promoción y realización de actividades de ciencia,
-									tecnología e innovación.
+									{tAboutUs('aboutUsDescription')}
 								</p>
 							</div>
 						</article>
@@ -31,51 +35,49 @@ export default function Aboutus() {
 				<section className={styles.values}>
 					<div className={`${styles.values__container} container mx-auto`}>
 						<article>
-							<h2 className='text-2xl font-bold text-yellow-500'>MISIÓN</h2>
-							<p className='text-white text-base text-justify'>
-								Disminuir la brecha tecnológica del País en la Industria del Sector Defensa a través
-								de la apropiación y generación de conocimiento, el desarrollo tecnológico y mediante
-								la integración del sector productivo público y Privado, las universidades y el
-								estado. Todo lo anterior con proyección social para el desarrollo de tecnologías
-								duales, que potencien la producción tecnológica nacional y territorial
-							</p>
+							<h2 className='text-2xl font-bold text-yellow-500'>{tAboutUs('mision')}</h2>
+							<p className='text-white text-base text-justify'>{tAboutUs('misionDescription')}</p>
 						</article>
 						<article>
-							<h2 className='text-2xl font-bold text-yellow-500'>VISIÓN</h2>
-							<p className='text-white text-base text-justify'>
-								Ser reconocida como gestora de la disminución de la brecha tecnológica de la
-								industria del Sector Defensa, convirtiéndose en la principal proveedora de
-								soluciones en tecnología para este, buscando ocupar una posición de importancia en
-								el mercado Latinoamericano.
-							</p>
+							<h2 className='text-2xl font-bold text-yellow-500'>{tAboutUs('vision')}</h2>
+							<p className='text-white text-base text-justify'>{tAboutUs('visionDescription')}</p>
 						</article>
 					</div>
 				</section>
 				<section className={styles.aboutus__end}>
 					<div className={`${styles.aboutus__end_container} container mx-auto`}>
 						<div className={`${styles.aboutus__menu}`}>
-							<h3 className='text-2xl font-bold text-yellow-500'>MÁS DE NOSTROS</h3>
+							<h3 className='text-2xl font-bold text-yellow-500'>{tAboutUs('moreAbout')}</h3>
 							<ul className='flex flex-col gap-5 my-5'>
 								<li>
-									<Link href={'/home/about-us/more#nuestros-inicios'} className='text-white'>
+									<Link
+										href={`/${currentLocale}/home/about-us/more#nuestros-inicios`}
+										className='text-white'
+									>
 										<h4 className='flex items-center text-xl font-semibold'>
-											<FaChevronRight className='text-yellow-500' /> NUESTROS INICIOS
+											<FaChevronRight className='text-yellow-500' /> {tAboutUs('nuestrosInicios')}
 										</h4>
-										<p className='text-sm ml-5'>Historia de CODALTEC</p>
+										<p className='text-sm ml-5'>{tAboutUs('historiaCodaltec')}</p>
 									</Link>
 								</li>
 								<li>
-									<Link href={'/home/about-us/more#organigrama'} className='text-white'>
+									<Link
+										href={`/${currentLocale}/home/about-us/more#organigrama`}
+										className='text-white'
+									>
 										<h4 className='flex items-center text-xl font-semibold'>
-											<FaChevronRight className='text-yellow-500' /> ORGANIGRAMA DE CODALTEC
+											<FaChevronRight className='text-yellow-500' /> {tAboutUs('organigrama')}
 										</h4>
-										<p className='text-sm ml-5'>Estructura interna de CODALTEC</p>
+										<p className='text-sm ml-5'>{tAboutUs('estructura')}</p>
 									</Link>
 								</li>
 								<li>
-									<Link href={'/home/about-us/more#directivos'} className='text-white'>
+									<Link
+										href={`/${currentLocale}/home/about-us/more#directivos`}
+										className='text-white'
+									>
 										<h4 className='flex items-center text-xl font-semibold'>
-											<FaChevronRight className='text-yellow-500' /> DIRECTIVOS
+											<FaChevronRight className='text-yellow-500' /> {tAboutUs('directivos')}
 										</h4>
 									</Link>
 								</li>
@@ -84,7 +86,7 @@ export default function Aboutus() {
 						<div className={`${styles.aboutus__map}`}>
 							<div className={`${styles.aboutus__map_sub}`}>
 								<h4 className='text-lg text-end underline text-white'>
-									BOGOTÁ (Carrera 38 No. 25B - 27 Pisos 3 - 4)
+									{tAboutUs('sedePrincipal')}
 								</h4>
 								<iframe
 									title='Sede Bogotá CODALTEC'
@@ -92,11 +94,10 @@ export default function Aboutus() {
 									style={{border: 0}}
 									loading='lazy'
 								/>
-								;
 							</div>
 							<div className={`${styles.aboutus__map_sub}`}>
 								<h4 className='text-lg text-end underline text-white'>
-									VILLAVICENCIO (Avenida 40 No. 24A - 71)
+									{tAboutUs('sedeVillavicencio')}
 								</h4>
 								<iframe
 									title='Sede Villavicencio CODALTEC'

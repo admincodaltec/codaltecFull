@@ -23,7 +23,6 @@ export function useGetPosts() {
 				const data = await response.json();
 				setPosts(data);
 				setIsLoading(false);
-				console.log('POSTS: ', data);
 			} catch (error) {
 				setError('Error fetching data');
 				setIsLoading(false);
@@ -52,7 +51,6 @@ export function useGetPostById(id: number) {
 				const data = await response.json();
 				setPost(data);
 				setIsLoading(false);
-				console.log('POST: ', data);
 			} catch (error) {
 				setError('Error fetching data');
 				setIsLoading(false);
