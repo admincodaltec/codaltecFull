@@ -4,11 +4,13 @@ import {useGetSliders} from '@/services/SliderServices';
 import {FadeLoader} from 'react-spinners';
 import SliderItem from '@/components/home/SliderItem';
 import Slider from 'react-slick';
+import {useLocale} from 'next-intl';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export default function SlidersSection() {
+	const currentLocale = useLocale();
 	const {sliders, isLoading, error} = useGetSliders();
 
 	const settings = {
@@ -49,8 +51,8 @@ export default function SlidersSection() {
 						<SliderItem
 							key={index}
 							image={`${process.env.NEXT_PUBLIC_HOST_URL}/backend/public/images/${item.image}`}
-							title={item.esTitle}
-							description={item.esDescription}
+							title={currentLocale === 'es' ? item.esTitle : item.enTitle}
+							description={currentLocale === 'es' ? item.esDescription : item.enDescription}
 						/>
 					))}
 				</Slider>

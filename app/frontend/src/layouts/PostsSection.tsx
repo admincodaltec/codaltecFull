@@ -3,6 +3,7 @@
 import PostItem from '@/components/home/PostItem';
 import {useGetPosts} from '@/services/PostsServices';
 import {FadeLoader} from 'react-spinners';
+import {useLocale} from 'next-intl';
 
 interface PostsSectionProps {
 	maxPostsToShow?: number;
@@ -10,6 +11,7 @@ interface PostsSectionProps {
 }
 
 const PostsSection: React.FC<PostsSectionProps> = ({maxPostsToShow, ulClassName}) => {
+	const currentLocale = useLocale();
 	const {posts, isLoading, error} = useGetPosts();
 	return (
 		<ul className='w-full'>
@@ -38,7 +40,7 @@ const PostsSection: React.FC<PostsSectionProps> = ({maxPostsToShow, ulClassName}
 								`${process.env.NEXT_PUBLIC_HOST_URL}/backend/public/images/${article.image}` ||
 								'/assets/codaltec-icon.PNG'
 							}
-							title={article.esTitle}
+							title={currentLocale === 'es' ? article.esTitle : article.enTitle}
 						/>
 					))}
 				</ul>
@@ -53,7 +55,7 @@ const PostsSection: React.FC<PostsSectionProps> = ({maxPostsToShow, ulClassName}
 								`${process.env.NEXT_PUBLIC_HOST_URL}/backend/public/images/${article.image}` ||
 								'/assets/codaltec-icon.PNG'
 							}
-							title={article.esTitle}
+							title={currentLocale === 'es' ? article.esTitle : article.enTitle}
 							isFirst={index === 0}
 						/>
 					))}

@@ -2,6 +2,7 @@
 
 import {useGetPostById} from '@/services/PostsServices';
 import styles from '@/styles/Post.module.css';
+import {useLocale} from 'next-intl';
 
 interface PostProps {
 	params: {
@@ -10,7 +11,8 @@ interface PostProps {
 }
 
 export default function Post({params}: PostProps) {
-	const id = parseInt(params.slug, 10); // Asume que el slug es un ID numérico
+	const currentLocale = useLocale();
+	const id = parseInt(params.slug, 10);
 	const {post, isLoading, error} = useGetPostById(id);
 
 	if (isLoading) {
@@ -33,16 +35,19 @@ export default function Post({params}: PostProps) {
 					alt={post?.esTitle}
 				/>
 				<div className='container'>
-					<h1 className={styles.post__title}>{post?.esTitle}</h1>
+					<h1 className={styles.post__title}>
+						{currentLocale === 'es' ? post?.esTitle : post?.enTitle}
+					</h1>
 					<p className={styles.post__subtitle}>
-						Fecha de publicación: {post?.createdAt.substring(0, 10)}
+						{currentLocale === 'es' ? 'Fecha de publicación: ' : 'Date of publication: '}{' '}
+						{post?.createdAt.substring(0, 10)}
 					</p>
 				</div>
 			</section>
 			<section className={styles.post__content}>
 				<div className='container py-5'>
 					<article className='text-white'>
-						<p>{post?.esDescription}</p>
+						<p>{currentLocale === 'es' ? post?.esDescription : post?.enDescription}</p>
 					</article>
 				</div>
 			</section>

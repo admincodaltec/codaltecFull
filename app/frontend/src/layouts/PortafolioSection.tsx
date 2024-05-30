@@ -3,8 +3,10 @@
 import {useGetPortafolio} from '@/services/PortfolioServices';
 import PortfolioItem from '@/components/home/PortfolioItem';
 import {FadeLoader} from 'react-spinners';
+import {useLocale} from 'next-intl';
 
 export default function PortafolioSection() {
+	const currentLocale = useLocale();
 	const {portafolios, isLoading, error} = useGetPortafolio();
 	return (
 		<div className='w-full'>
@@ -21,7 +23,7 @@ export default function PortafolioSection() {
 			) : portafolios.length === 0 ? (
 				<div className='flex h-full w-full justify-center items-center'>
 					<p className='text-yellow-500 text-center text-3xl'>
-						No hay líneas de negocio aun disponibles!
+						No hay líneas de negocio aún Cargadas!
 					</p>
 				</div>
 			) : (
@@ -30,8 +32,8 @@ export default function PortafolioSection() {
 						<PortfolioItem
 							key={index}
 							image={`${process.env.NEXT_PUBLIC_HOST_URL}/backend/public/images/${item.icon}`}
-							title={item.esName}
-							description={item.esDescription}
+							title={currentLocale === 'es' ? item.esName : item.enName}
+							description={currentLocale === 'es' ? item.esDescription : item.enDescription}
 						/>
 					))}
 				</ul>

@@ -16,7 +16,7 @@ export default function Portfolio() {
 		<>
 			<HeaderHome />
 			<main>
-				<BannerHeader title={tPortafolio('portafolio')} image='products.jpg' />
+				<BannerHeader title={tPortafolio('portafolioTitle')} image='products.jpg' />
 				<section className={'bg-[#1A1A1A] min-h-[60vh]'}>
 					<div className='container mx-auto pb-12'>
 						<article className='grid gap-2 items-center grid-cols-[1fr_2px_300px] py-5'>

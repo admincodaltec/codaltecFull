@@ -4,7 +4,9 @@ export interface Portfolio {
 	id: number;
 	icon: string;
 	esName: string;
+	enName: string;
 	esDescription: string;
+	enDescription: string;
 }
 
 export function useGetPortafolio() {

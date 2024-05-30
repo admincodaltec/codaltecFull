@@ -4,7 +4,9 @@ export interface Slider {
 	id: number;
 	image: string;
 	esTitle: string;
+	enTitle: string;
 	esDescription: string;
+	enDescription: string;
 	createdAt: string;
 }
 
