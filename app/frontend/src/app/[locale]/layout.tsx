@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import {Montserrat} from 'next/font/google';
+import Provider from '@/context/Provider';
 
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
@@ -31,7 +32,9 @@ export default async function RootLayout({
 	return (
 		<html lang={locale}>
 			<NextIntlClientProvider messages={messages}>
-				<body className={inter.className}>{children}</body>
+				<body className={inter.className}>
+					<Provider>{children}</Provider>
+				</body>
 			</NextIntlClientProvider>
 		</html>
 	);
