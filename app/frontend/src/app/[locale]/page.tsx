@@ -91,10 +91,8 @@ export default function Welcome() {
 							title={'DIRECCIÓN'}
 							content={
 								<>
-									<p>Oficina Principal Cra 50 # 15 - 35, Bogotá - Colombia</p> <br />{' '}
-									<p>
-										Oficina Villavicencio Avenida 40 No. 24A - 71 Tercer piso, Villavicencio - Meta
-									</p>
+									<p>Oficina Principal: Bogotá (Carrera 38 No. 25B - 27 Pisos 3 - 4)</p> <br />{' '}
+									<p>Oficina Secundaria: Villavicencio (Avenida 40 No. 24A - 71 Piso 3)</p>
 								</>
 							}
 						/>

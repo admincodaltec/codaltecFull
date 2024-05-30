@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import {useLocale} from 'next-intl';
 
 interface CardTransparencyProps {
 	title: string;
@@ -8,9 +9,10 @@ interface CardTransparencyProps {
 }
 
 const CardTransparency: React.FC<CardTransparencyProps> = ({title, text, link}) => {
+	const currentLocale = useLocale();
 	return (
 		<Link
-			href={link}
+			href={`/${currentLocale}/${link}`}
 			className='flex flex-col rounded-lg bg-[#4f4f4f] hover:scale-95 transition-transform duration-300'
 		>
 			<div className='flex justify-center items-center bg-yellow-500 p-4 rounded-t-lg h-24'>

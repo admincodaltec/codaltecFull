@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 export default function Aboutus() {
 	const currentLocale = useLocale();
 	const tAboutUs = useTranslations('aboutUs');
+
 	return (
 		<>
 			<HeaderHome />

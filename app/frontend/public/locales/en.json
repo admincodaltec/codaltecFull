@@ -83,7 +83,7 @@
 		"backTransparency": "BACK TO TRANSPARENCY"
 	},
 	"contracts": {
-		"individualContract": "CONTRACT INFORMATION",
+		"individualContract": "NAME",
 		"number": "PROCESS NUMBER",
 		"type": "TYPE OF PROCESS",
 		"state": "STATUS",
@@ -91,11 +91,13 @@
 		"amount": "AMOUNT",
 		"date": "DATE",
 		"backContracts": "BACK TO CONTRACTS",
-		"documents": "Attached Documents"
+		"documents": "ATTACHED DOCUMENTS",
+		"contractContact": "Welcome to our contracts section! Here you can easily access and download contracts organized by year. Need something specific? Feel free to send us an email with the details of the contract you are looking for to info@codaltec.com. We're here to help - browse and download with confidence!"
 	},
 	"controlInterno": {
 		"controlTitle": "INTERNAL CONTROL",
 		"title": "TITLE",
+		"controlDate": "DATE",
 		"soport": "MEDIUM"
 	},
 	"financial": {
