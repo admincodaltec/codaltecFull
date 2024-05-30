@@ -1,0 +1,129 @@
+{
+	"header": {
+		"inicio": "Home",
+		"nosotros": "About Us",
+		"nuestrosInicios": "Our Beginnings",
+		"organigrama": "Organization chart",
+		"directivos": "Managers",
+		"portafolio": "Portfolio",
+		"noticias": "News",
+		"investigación": "Research Center",
+		"laboratory": "RF Lab",
+		"transparencia": "Transparency",
+		"contratacion": "Contracting",
+		"controlInterno": "Internal Control",
+		"financial": "Financial Information",
+		"atention": "Customer Service"
+	},
+	"productsHome": {
+		"productos&servicios": "BUSINESS LINES",
+		"productsDescription": "In this section you will find the portfolio of products and services that our corporation makes available, driving technological development and innovation in our country. Explore our advanced solutions and discover how we are transforming various sectors with cutting-edge technology.",
+		"productsBusiness": "LINES OF BUSINESS",
+		"productsLink": "KNOW OUR CAPABILITIES"
+	},
+	"postHome": {
+		"postHomeTitle1": "LATEST",
+		"postHomeTitle2": "NEWS",
+		"postLink": "SEE MORE NEWS"
+	},
+	"aboutUs": {
+		"aboutUsTitle": "WHO ARE WE?",
+		"aboutUsDescription": "We are a Public Entity, of Private Law, Non-Profit, whose corporate purpose is the development, promotion and realization of science, technology and innovation activities.",
+		"mision": "MISSION",
+		"misionDescription": "To reduce the technological gap of the country in the Defense Industry through the appropriation and generation of knowledge, technological development and through the integration of the public and private productive sector, universities and the state. All the above with social projection for the development of dual technologies that enhance national and territorial technological production.",
+		"vision": "VISION",
+		"visionDescription": "To be recognized as a manager of the reduction of the technological gap in the Defense Sector industry, becoming the main supplier of technology solutions for it, seeking to occupy an important position in the Latin American market.",
+		"moreAbout": "MORE ABOUT US",
+		"nuestrosInicios": "OUR BEGINNINGS",
+		"historiaCodaltec": "Codaltec History",
+		"organigrama": "CODALTEC ORGANIZATION CHART",
+		"estructura": "Codaltec internal structure",
+		"directivos": "MANAGEMENT",
+		"sedePrincipal": "Main Office: Bogotá (Carrera 38 No. 25B - 27 Floors 3 - 4)",
+		"sedeVillavicencio": "Secondary Office: Villavicencio (Avenida 40 No. 24A - 71 Piso 3) "
+	},
+	"moreAboutUs": {
+		"iniciosDescription": "The Corporación de Alta Tecnología para la Defensa - CODALTEC, was born from the need of the Defense Sector to promote the development of capabilities in technological areas to create its own solutions, supporting the operational environment of the Public Force and the productive system of the country. It is a public entity, of private law, non-profit, whose corporate purpose is the development, promotion and implementation of science, technology and innovation activities. It was created on December 7, 2012 and its Founding Members were: The Ministry of National Defense, the Colombian Military Industry - INDUMIL, the Colombian Aeronautical Industry Corporation - CIAC S.A., the Government of Meta and the Mayor's Office of Villavicencio. CODALTEC is committed to the development of R&D&I projects that will allow Colombia to obtain the necessary capabilities for the creation of a new industrial fabric based on knowledge and technology, capable of positioning the Defense Sector as a major player in the development of the Colombian economy through investment in education and innovation. CODALTEC started with two bets SIMULATION and SENSORS, among which the following stand out; Simulator for Remotely Manned Aircraft - SIMART, Simulator for Light Armored Troop Carrier Vehicle - MARKAB, Simulator for Single Engine Aircraft Regional / Utility Type, Turboprop - SIMAER, Simulator Unmanned Aerial System for Ground Maneuvering type RAVEN, Radar System, Surface Intrusion Detection Radar - SINDER® and TADER® System, CODALTEC was recognized as an Autonomous Research Center in September 2018 according to Resolution No. 0984 of 2018 of COLCIENCIAS. This makes us actors of the National System of Science Technology and Innovation of Colombia, reaffirming our goal of strengthening the scientific, technological capabilities of the Defense and civilian Sector with dual application technologies.",
+		"regresar": "Back"
+	},
+	"portafolio": {
+		"portafolioTitle": "PORTFOLIO"
+	},
+	"products": {
+		"backPortafolio": "BACK TO PORTFOLIO",
+		"backHome": "BACK TO HOME"
+	},
+	"noticias": {
+		"noticiasTitle": "NEWS",
+		"noticiasDescription": "WELCOME TO OUR NEWS SESSION, HERE YOU WILL FIND THE LATEST EVENTS OF NATIONAL OR INTERNATIONAL INTEREST CONCERNING CODALTEC.",
+		"readMore": "REED MORE",
+		"noticiaNext": "FOLLOWING NEWS",
+		"ultimas": "LATEST"
+	},
+	"investigation": {
+		"investigationTitle": "RESEARCH CENTER",
+		"investigationDescription": "CODALTEC is an entity of civilian nature, private law non-profit, attached to the Ministry of National Defense of Colombia and member of the Social and Business Group of Defense - GSED, CODALTEC is dedicated to the generation of dual technologies and knowledge for the defense and security sector of Colombia through CTeI projects and applied research in two main lines of research Software technologies and simulation; and Sensors and radars. CODALTEC was recognized as a Research Center by Resolution No. 0984 of 2018 of COLCIENCIAS and currently by Resolution 2289 of 2021 of Minciencias, reaffirming as an actor of the SNCTeI its objective of strengthening the scientific, technological capabilities of the Defense and civilian Sector with dual application technologies. Its main activity as a Research Center is Applied Research, complemented with Technological Development activities, human capital formation, collaboration in CTeI activities and scientific dissemination. As results it has products such as: research articles, book chapters, working papers, industrial designs, technological prototypes, distinctive signs, software, consultancies, events, research reports, printed/multimedia/virtual content, short courses, directed/tutorial work and R&D&I projects.",
+		"investigationTeams": "RESEARCH GROUPS",
+		"investigationGids": "GIDS is the Sensor Research and Development Group dedicated to develop hardware and software solutions for the civil and military industry through novel sensor technologies that generate a positive impact at regional and national level. Its lines of work are framed in Electrical Sensors; Radiofrequency and Radar; Digital Signal Processing and Data Analysis and Converging Technologies for the Environment and Agriculture.",
+		"investigationKTEG": "KTEG is the Knowledge Technology Engineering Group who work in the area of modeling and simulation generating applicable knowledge for the Colombian industry and academia. Research based on the innovation of products and technologies used in the defense sector. Its lines of research include among others: Software and Hardware for Simulation; Systems Modeling and Simulation, Virtual Worlds/Scenarios.",
+		"investigationLaboratory": "LABORATORY SPECIALIZED IN SENSORS AND RADIOFREQUENCY",
+		"investigationLaboratoryDescription": "CODALTEC has in its offices in Villavicencio the Specialized Laboratory in Sensors and Radiofrequency, where there are high performance measuring instruments such as oscilloscopes, portable and cabinet spectrum analyzers, signal generators, logic analyzers, terrestrial and aerial drones, multispectral cameras, sensors, and a variety of antennas with which they study and develop applications of the electromagnetic spectrum. This specialized laboratory is the cradle of several of the Corporation's developments in sensor integration and use of the spectrum, in projects such as the Drone Inhibitor, Perimeter Protection Radar, Access Control and Monitoring Systems, Command and Control Centers, among others. The laboratory is also available for our allies, also developing R+D+i projects, graduate work, internships and academic practices for allied educational institutions.",
+		"investigationMore": "LEARN MORE ABOUT OUR LABORATORY"
+	},
+	"transparency": {
+		"transparencyTitle": "TRANSPARENCY",
+		"transparencyDescription": "In compliance with the Transparency Law and the right of access to public information, Law 1712 of March 6, 2014 and Resolution 1519 of 2020 issued by the MINTIC, CODALTEC makes available to citizens , information of general interest in the following matters:",
+		"contratacion": "CONTRACTING",
+		"contratacionDescription": "The Corporación de Alta Tecnología para la Defensa, is a civil entity, of private law and non-profit, which may be formed by both public and private entities, regulated in Articles 1 and 3 of Decree Law 393 of 1991, in accordance with the provisions of Article 633 and subsequent articles of the Civil Code. Of special nature, endowed with legal status, administrative autonomy and independent capital, in accordance with the Private Incorporation Document. It is an indirect decentralized entity that is part of the Social and Business Group of the Defense Sector - GSED.",
+		"control": "INTERNAL CONTROL",
+		"controlDescription": "CODALTEC is working on the consolidation of an Internal Control System, integrated by the organizational scheme and the set of plans, methods, principles, standards, procedures and mechanisms of corporate verification and evaluation for the achievement of the goals and objectives proposed in the strategic plan Below, you will find links to relevant information on this matter:",
+		"financiera": "FINANCIAL INFORMATION",
+		"financieraDescription": "In this section you will find the following information: Financial statements and their notes. Permanence Special Tax Regime RTE. Statutory auditor's report.",
+		"conoceMas": "LEARN MORE",
+		"backTransparency": "BACK TO TRANSPARENCY"
+	},
+	"contracts": {
+		"individualContract": "NAME",
+		"number": "PROCESS NUMBER",
+		"type": "TYPE OF PROCESS",
+		"state": "STATUS",
+		"object": "PURPOSE",
+		"amount": "AMOUNT",
+		"date": "DATE",
+		"backContracts": "BACK TO CONTRACTS",
+		"documents": "ATTACHED DOCUMENTS",
+		"contractContact": "Welcome to our contracts section! Here you can easily access and download contracts organized by year. Need something specific? Feel free to send us an email with the details of the contract you are looking for to info@codaltec.com. We're here to help - browse and download with confidence!"
+	},
+	"controlInterno": {
+		"controlTitle": "INTERNAL CONTROL",
+		"title": "TITLE",
+		"controlDate": "DATE",
+		"soport": "MEDIUM"
+	},
+	"financial": {
+		"title": "FINANCIAL STATEMENT",
+		"download": "Download"
+	},
+	"pqrs": {
+		"title": "CUSTOMER SERVICE",
+		"description": "Help us to improve, in this section you can file, follow up and consult the reports of your PQRSD related to our services. For CODALTEC it is important to meet your requirements, requests for information or documents, qualify a service, propose improvement actions or raise a complaint (C.P.C. - Law 1755 of 2015).",
+		"subtitle": "SELECT THE OPTION TO FILL IN",
+		"title1": "PQRSD REGISTRATION",
+		"title2": "CONSULT PQRSD",
+		"title3": "CONTACT FORM",
+		"subtitleButton": "CLICK HERE"
+	},
+	"footer": {
+		"contacto": "CONTACT",
+		"horario": "OPENING HOURS",
+		"horarioDias": "Monday through Friday 8:00 a. m. - 12:00 p. m. 1:00 p. m. - 5:00 p. m.",
+		"direccion": "ADDRESS",
+		"bogota": "Main Office: Bogotá (Carrera 38 No. 25B - 27 Floors 3 - 4)",
+		"villavicencio": "Secondary Office: Villavicencio (Avenida 40 No. 24A - 71 Piso 3) ",
+		"siguenos": "FOLLOW US"
+	},
+	"language": {
+		"español": "Spanish",
+		"ingles": "English"
+	}
+}

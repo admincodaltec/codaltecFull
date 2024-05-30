@@ -1,0 +1,86 @@
+name: portal-web
+
+services:
+  front:
+    container_name: front-web
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile-frontend
+    depends_on:
+      - back
+    working_dir: /home/node/app
+    env_file:
+      - ./app/env.front
+      - ./app/env.global
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./app/frontend:/home/node/app
+    command: >
+      bash -c "yarn install
+                npm run dev"
+    networks:
+      - net-portal
+
+  back:
+    container_name: back-web
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile-backend
+    depends_on:
+      - db
+    working_dir: /home/node/app
+    env_file:
+      - ./app/env.back
+      - ./app/env.global
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./app/backend:/home/node/app
+    command: >
+      bash -c "yarn install
+                npm run dev"
+    networks:
+      - net-portal
+
+  db:
+    container_name: db-web
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile-db
+    env_file:
+      - ./app/env.db
+      - ./app/env.global
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./app/db/migrations:/docker-entrypoint-initdb.d
+      - ./app/db/mysql:/var/lib/mysql
+    networks:
+      - net-portal
+
+  proxy:
+    container_name: proxy-web
+    restart: unless-stopped
+    image: nginx
+    volumes:
+      - ./app/proxy:/etc/nginx
+    ports:
+      - "18080:80"
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+    networks:
+      - net-portal
+
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    networks:
+      - net-portal
+
+networks:
+  net-portal:
