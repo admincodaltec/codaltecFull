@@ -15,7 +15,7 @@ const PostItem: React.FC<PostItemProps> = ({uri, image, title, isFirst}) => {
 		<Link
 			href={`/${currentLocale}/home/posts/${uri}`}
 			className={`relative rounded-lg z-0 ${
-				isFirst ? 'col-span-2 row-span-2' : 'col-span-1 row-span-1'
+				isFirst ? 'col-auto row-auto md:col-span-2 md:row-span-2' : 'col-span-1 row-span-1'
 			} hover:scale-105 transition-transform duration-300`}
 		>
 			<div className='z-10 rounded-lg absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-100' />

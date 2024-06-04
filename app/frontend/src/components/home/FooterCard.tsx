@@ -1,4 +1,4 @@
-﻿import { ReactNode } from 'react';
+﻿import {ReactNode} from 'react';
 
 interface FooterCardProps {
 	title?: string;
@@ -8,23 +8,19 @@ interface FooterCardProps {
 	classStyles?: string;
 }
 
-const FooterCard: React.FC<FooterCardProps> = ({
-	title,
-	content,
-	title1,
-	content1,
-	classStyles,
-}) => {
+const FooterCard: React.FC<FooterCardProps> = ({title, content, title1, content1, classStyles}) => {
 	return (
-		<div className={`flex flex-col justify-center h-fit py-2 px-5 ${classStyles} max-w-[220px]`}>
-			<span className="my-1">
-				<h5 className="text-white text-xs font-bold my-1">{title}</h5>
-				{content && <div className="text-white text-xs font-light">{content}</div>}
+		<div
+			className={`flex flex-col max-w-[300px] justify-center h-fit py-2 px-5 ${classStyles} md:max-w-[220px]`}
+		>
+			<span className='my-1'>
+				<h5 className='text-white text-xs font-bold my-1'>{title}</h5>
+				{content && <div className='text-white text-xs font-light'>{content}</div>}
 			</span>
 			{title1 && content1 && (
-				<span className="my-1">
-					<h5 className="text-white text-xs font-bold my-1">{title1}</h5>
-					{content && <div className="text-white text-xs font-light">{content1}</div>}
+				<span className='my-1'>
+					<h5 className='text-white text-xs font-bold my-1'>{title1}</h5>
+					{content && <div className='text-white text-xs font-light'>{content1}</div>}
 				</span>
 			)}
 		</div>

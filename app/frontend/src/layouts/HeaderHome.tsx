@@ -1,13 +1,15 @@
 'use client';
 
-import {usePathname} from 'next/navigation';
 import React, {useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '@/styles/HeaderHome.module.css';
 import NavItem from '../components/home/NavItem';
+import NavMovile from './NavMovile';
 import {useTranslations} from 'next-intl';
 import {FaLanguage} from 'react-icons/fa6';
+import {HiBars3BottomRight} from 'react-icons/hi2';
+import {usePathname} from 'next/navigation';
+import styles from '@/styles/HeaderHome.module.css';
 
 export default function HeaderHome() {
 	const tHeader = useTranslations('header');
@@ -15,9 +17,14 @@ export default function HeaderHome() {
 	const currentPath = usePathname();
 
 	const [languageMenuVisible, setLanguageMenuVisible] = useState(false);
+	const [movileMenuVisible, setMovileMenuVisible] = useState(false);
 
 	const toggleLanguageMenu = () => {
 		setLanguageMenuVisible(!languageMenuVisible);
+	};
+
+	const toggleMovileMenu = () => {
+		setMovileMenuVisible(!movileMenuVisible);
 	};
 
 	const switchSpanish = () => {
@@ -40,7 +47,7 @@ export default function HeaderHome() {
 		<header>
 			<section className={styles.header__content}>
 				<div className='flex justify-between w-full container mx-auto py-2'>
-					<nav className='flex self-center'>
+					<nav className={styles.header__nav_desktop}>
 						<ul className='flex'>
 							<li className='flex items-center py-1 px-3'>
 								<Link href='/home/home'>
@@ -104,6 +111,11 @@ export default function HeaderHome() {
 							</div>
 						)}
 					</div>
+					<button onClick={toggleMovileMenu} className={styles.header__but_movile}>
+						<HiBars3BottomRight className='text-3xl' />
+					</button>
+					{/* Mobile navigation */}
+					{movileMenuVisible && <NavMovile />}
 				</div>
 			</section>
 		</header>

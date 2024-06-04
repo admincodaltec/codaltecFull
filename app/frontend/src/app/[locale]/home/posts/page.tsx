@@ -21,13 +21,13 @@ export default function Posts() {
 				<BannerHeader title={tPosts('noticiasTitle')} image='newsBanner.jpg' />
 				<section className={`${styles.portfolio__content} min-h-[60vh]`}>
 					<div className='container mx-auto'>
-						<article className='grid gap-2 items-center grid-cols-[1fr_2px_300px] py-5'>
+						<article className='grid gap-2 items-center grid-cols-1fr py-5 md:grid-cols-[1fr_2px_300px]'>
 							<h2 className='text-xl font-bold text-white'>{tPosts('noticiasDescription')}</h2>
 							<span className='w-[2px] h-full bg-white' />
 						</article>
 						<PostsSection ulClassName={`${styles.posts__content}`} />
 					</div>
-				</section>
+				</section>	
 			</main>
 			<FooterHome />
 		</>

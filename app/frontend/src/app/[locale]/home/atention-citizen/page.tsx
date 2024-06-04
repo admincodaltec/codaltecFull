@@ -328,12 +328,14 @@ export default function Atention() {
 							1755 de 2015).
 						</p>
 					</article>
-					<article className='flex gap-5 items-center my-8'>
+					<article className='flex gap-5 items-center my-8 flex-col md:flex-row'>
 						<h3 className='font-bold text-2xl text-white'>SELECCIONE LA OPCIÓN A DILIGENCIAR</h3>
-						<FaCaretDown className='text-yellow-500 text-2xl' />
-						<span className='block w-1/2 h-1 bg-[#4f4f4f]' />
+						<FaCaretDown className='text-yellow-500 text-2xl  invisible md:visible' />
+						<span className='block w-full md:w-1/2 h-1 bg-[#4f4f4f]' />
 					</article>
-					<div className='grid gap-10 grid-cols-3 justify-center px-12 pb-10'>
+					<div
+						className={`grid gap-10 grid-cols-3 justify-center px-12 pb-10 ${styles.transparency__section}`}
+					>
 						<CardAtention title='REGISTRO DE PQRSD' onClick={() => setShowPqrsModal(true)} />
 
 						<CardAtention title='CONSULTAR DE PQRSD' onClick={() => setShowRequestModal(true)} />

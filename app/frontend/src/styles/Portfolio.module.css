@@ -1,6 +1,15 @@
-.portfolio__content{
-    background-image: url('../../public/assets/BG_Lineas-de-Negocio.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.portfolio__content {
+	background-image: url('../../public/assets/BG_Lineas-de-Negocio.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.portfolio__section {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+	.portfolio__section {
+		grid-template-columns: 1fr;
+	}
 }

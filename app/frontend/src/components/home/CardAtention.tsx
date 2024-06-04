@@ -13,7 +13,7 @@ const CardAtention: React.FC<CardAtentionProps> = ({title, onClick}) => {
 			className='flex flex-col rounded-lg bg-[#4f4f4f] hover:scale-95 transition-transform duration-300'
 			onClick={onClick}
 		>
-			<div className='flex justify-center items-center p-3 bg-yellow-500 rounded-t-lg h-24'>
+			<div className='flex justify-center items-center p-3 bg-yellow-500 rounded-t-lg w-full h-24'>
 				<p className='font-bold text-3xl text-center text-white leading-[1.5rem]'>{title}</p>
 			</div>
 			<div className='flex flex-col justify-center items-center w-full rounded-b-lg p-3'>

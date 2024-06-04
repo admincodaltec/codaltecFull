@@ -29,7 +29,7 @@ export default function Investigation() {
 						<h2 className='text-3xl font-bold text-yellow-500 mb-2'>
 							{tInvestigation('investigationTeams')}
 						</h2>
-						<div className='grid gap-4 items-center grid-cols-[200px_1fr]'>
+						<div className='grid gap-4 grid-cols-[100px_1fr] items-center md:grid-cols-[200px_1fr]'>
 							<img src='/assets/Logos/gdis.png' alt='Team of investigation CODALTEC' />
 							<article className='flex flex-col items-end bg-black p-5 rounded-2xl'>
 								<p className='text-white'>{tInvestigation('investigationGids')}</p>
@@ -43,7 +43,7 @@ export default function Investigation() {
 								</a>
 							</article>
 						</div>
-						<div className='grid gap-4 items-center grid-cols-[1fr_200px]'>
+						<div className='grid gap-4 grid-cols-[1fr_100px] items-center md:grid-cols-[1fr_200px]'>
 							<article className='flex flex-col items-end bg-black p-5 rounded-2xl'>
 								<p className='text-white'>{tInvestigation('investigationKTEG')}</p>
 								<a
@@ -71,7 +71,7 @@ export default function Investigation() {
 						alt='Team of investigation CODALTEC'
 					/>
 					<div className='container py-4 '>
-						<article className='grid gap-4 grid-cols-[1fr_30%] bg-[#2A2A2A] p-5 rounded-xl'>
+						<article className='grid gap-4 grid-cols-1 bg-[#2A2A2A] p-5 rounded-xl md:grid-cols-[1fr_30%]'>
 							<p className='text-white text-justify'>
 								{tInvestigation('investigationLaboratoryDescription')}{' '}
 							</p>

@@ -12,3 +12,9 @@
 	grid-auto-rows: 240px;
 	gap: 24px;
 }
+
+@media (max-width: 768px) {
+	.posts__content {
+		grid-template-columns: 1fr;
+	}
+}
