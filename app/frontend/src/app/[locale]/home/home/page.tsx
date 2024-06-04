@@ -38,6 +38,13 @@ export default function Home() {
 								{tProducts('productsLink')} <FaChevronRight className='text-yellow-500 text-4xl' />
 							</Link>
 						</div>
+						<div className='flex justify-center items-center w-full h-full'>
+							<img
+								className='object-contain'
+								src='/assets/lines.png'
+								alt='Líneas de negocio CODALTEC'
+							/>
+						</div>
 					</div>
 				</section>
 				<section className={styles.posts}>

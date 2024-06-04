@@ -8,7 +8,7 @@
 
 .bussines__container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(2, 1fr);
 	height: 100%;
 	gap: 20px;
 }
@@ -38,4 +38,15 @@
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
 	height: 100%;
+}
+@media (max-width: 768px) {
+	.posts__container,
+	.bussines__container {
+		grid-template-columns: 1fr;
+	}
+	.bussines__container_right {
+		grid-template-columns: 1fr;
+		grid-auto-rows: 240px;
+		height: auto;
+	}
 }

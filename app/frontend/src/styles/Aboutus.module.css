@@ -82,3 +82,16 @@
 	gap: 20px;
 	color: white;
 }
+
+@media (max-width: 768px) {
+	.aboutus {
+		background-position: 0px 0px;
+	}
+	.aboutus__container,
+	.values__container,
+	.aboutus__end_container,
+	.moreabout__page_directives {
+		grid-template-columns: 1fr;
+		gap: 0px;
+	}
+}

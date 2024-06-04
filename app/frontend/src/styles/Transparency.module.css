@@ -4,3 +4,11 @@
 	background-repeat: no-repeat;
 	background-position: center;
 }
+.transparency__section {
+	grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 768px) {
+	.transparency__section {
+		grid-template-columns: 1fr;
+	}
+}

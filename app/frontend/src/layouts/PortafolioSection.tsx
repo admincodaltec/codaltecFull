@@ -2,6 +2,7 @@
 
 import {useGetPortafolio} from '@/services/PortfolioServices';
 import PortfolioItem from '@/components/home/PortfolioItem';
+import styles from '@/styles/Portfolio.module.css';
 import {FadeLoader} from 'react-spinners';
 import {useLocale} from 'next-intl';
 
@@ -27,7 +28,7 @@ export default function PortafolioSection() {
 					</p>
 				</div>
 			) : (
-				<ul className='grid grid-cols-3 gap-10 px-6'>
+				<ul className={`grid gap-10 px-6 ${styles.portfolio__section}`}>
 					{portafolios.map((item, index) => (
 						<PortfolioItem
 							key={index}

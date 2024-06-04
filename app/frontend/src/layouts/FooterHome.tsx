@@ -11,7 +11,9 @@ export default function FooterHome() {
 	const tFooter = useTranslations('footer');
 	return (
 		<section className={styles.footer__content}>
-			<div className='flex justify-around items-center container mx-auto max-w-4xl'>
+			<div
+				className={`flex justify-around items-center container mx-auto max-w-4xl ${styles.footer__content_flex}`}
+			>
 				<FooterCard
 					title={tFooter('contacto')}
 					content={'Movil: +57 300 639 8324'}

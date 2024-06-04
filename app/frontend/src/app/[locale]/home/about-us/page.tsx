@@ -22,7 +22,7 @@ export default function Aboutus() {
 				<section className={styles.aboutus}>
 					<div className={`${styles.aboutus__container} container mx-auto`}>
 						<article className={styles.aboutus__article}>
-							<h1 className='text-3xl font-bold text-end text-yellow-500'>
+							<h1 className='text-3xl font-bold text-center text-yellow-500 md:text-end'>
 								{tAboutUs('aboutUsTitle')}
 							</h1>
 							<div className={styles.aboutus__article_text}>

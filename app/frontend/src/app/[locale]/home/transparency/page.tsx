@@ -22,12 +22,12 @@ export default function Transparency() {
 					<article className='p-4 bg-black rounded-lg'>
 						<p className='text-white'>{tTransparencia('transparencyDescription')}</p>
 					</article>
-					<article className='flex gap-5 items-center my-8'>
+					<article className='flex gap-5 items-center my-8 flex-col md:flex-row'>
 						<h3 className='font-bold text-2xl text-white'>{tTransparencia('conoceMas')}</h3>
-						<FaCaretDown className='text-yellow-500 text-2xl' />
-						<span className='block w-3/4 h-1 bg-[#4f4f4f]' />
+						<FaCaretDown className='text-yellow-500 text-2xl invisible md:visible' />
+						<span className='block w-full md:w-3/4 h-1 bg-[#4f4f4f]' />
 					</article>
-					<div className='grid gap-6 grid-cols-3 justify-center px-12'>
+					<div className={`grid gap-6 justify-center px-12 ${styles.transparency__section}`}>
 						<CardTransparency
 							link='/home/transparency/contracts'
 							title={tTransparencia('contratacion')}
