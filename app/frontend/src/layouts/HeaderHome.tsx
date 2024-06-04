@@ -50,7 +50,7 @@ export default function HeaderHome() {
 					<nav className={styles.header__nav_desktop}>
 						<ul className='flex'>
 							<li className='flex items-center py-1 px-3'>
-								<Link href='es/home/home'>
+								<Link href='es/home'>
 									<Image
 										src='/assets/Logos/Codaltec_Icono.svg'
 										alt='CODALTEC | Corporación de Alta Técnologia Logo'
@@ -59,29 +59,29 @@ export default function HeaderHome() {
 									/>
 								</Link>
 							</li>
-							<NavItem name={tHeader('inicio')} link={'/home/home'} />
+							<NavItem name={tHeader('inicio')} link={'/home'} />
 							<NavItem
 								name={tHeader('nosotros')}
-								link={'/home/about-us'}
+								link={'/about-us'}
 								subItems={[
-									{name: tHeader('nuestrosInicios'), link: '/home/about-us/more#nuestros-inicios'},
-									{name: tHeader('organigrama'), link: '/home/about-us/more#organigrama'},
-									{name: tHeader('directivos'), link: '/home/about-us/more#directivos'},
+									{name: tHeader('nuestrosInicios'), link: '/about-us/more#nuestros-inicios'},
+									{name: tHeader('organigrama'), link: '/about-us/more#organigrama'},
+									{name: tHeader('directivos'), link: '/about-us/more#directivos'},
 								]}
 							/>
-							<NavItem name={tHeader('portafolio')} link={'/home/portfolio'} />
-							<NavItem name={tHeader('noticias')} link={'/home/posts'} />
-							<NavItem name={tHeader('investigación')} link={'/home/investigation'} />
+							<NavItem name={tHeader('portafolio')} link={'/portfolio'} />
+							<NavItem name={tHeader('noticias')} link={'/posts'} />
+							<NavItem name={tHeader('investigación')} link={'/investigation'} />
 							<NavItem
 								name={tHeader('transparencia')}
-								link={'/home/transparency'}
+								link={'/transparency'}
 								subItems={[
-									{name: tHeader('contratacion'), link: '/home/transparency/contracts'},
-									{name: tHeader('controlInterno'), link: '/home/transparency/internal-control'},
-									{name: tHeader('financial'), link: '/home/transparency/financials'},
+									{name: tHeader('contratacion'), link: '/transparency/contracts'},
+									{name: tHeader('controlInterno'), link: '/transparency/internal-control'},
+									{name: tHeader('financial'), link: '/transparency/financials'},
 								]}
 							/>
-							<NavItem name={tHeader('atention')} link={'/home/atention-citizen'} />
+							<NavItem name={tHeader('atention')} link={'/atention-citizen'} />
 						</ul>
 					</nav>
 					<div className='flex items-center relative'>

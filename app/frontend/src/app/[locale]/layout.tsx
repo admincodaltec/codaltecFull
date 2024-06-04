@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 				alt: 'CODALTEC Logo',
 			},
 		],
-		locale: 'es_ES',
+		locale: 'es',
 		type: 'website',
 	},
 	keywords: [
@@ -45,13 +45,7 @@ export const metadata: Metadata = {
 		'Simuladores',
 		'Ministerio de Defensa de Colombia',
 	],
-	alternates: {
-		canonical: '/es/home/home',
-		languages: {
-			'es-ES': 'https://codaltec.com/es/',
-			'en-US': 'https://codaltec.com/en/',
-		},
-	},
+
 	creator: 'Alejandro Forero Vanegas',
 	category: 'technology',
 };
