@@ -55,7 +55,7 @@ export default function Home() {
 								<br />
 								{tPosts('postHomeTitle2')}
 							</h2>
-							<Link className='text-white underline' href={'/es/home/home/posts'}>
+							<Link className='text-white underline' href={'/es/home/posts'}>
 								{tPosts('postLink')}
 							</Link>
 						</div>

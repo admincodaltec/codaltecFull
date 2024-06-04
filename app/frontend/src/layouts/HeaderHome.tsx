@@ -50,7 +50,7 @@ export default function HeaderHome() {
 					<nav className={styles.header__nav_desktop}>
 						<ul className='flex'>
 							<li className='flex items-center py-1 px-3'>
-								<Link href='/home/home'>
+								<Link href='es/home/home'>
 									<Image
 										src='/assets/Logos/Codaltec_Icono.svg'
 										alt='CODALTEC | Corporación de Alta Técnologia Logo'
