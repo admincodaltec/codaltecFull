@@ -55,14 +55,19 @@ export default function Welcome() {
 				</section>
 			</header>
 
-			<main>
+			<main className='bg-white'>
 				<video
-					className='absolute top-0 left-0 h-screen w-screen object-cover z-[-1]'
+					className='absolute top-0 left-0 h-screen w-screen object-cover z-[-1] invisible md:visible'
 					src={'/assets/homeTranslate.mp4'}
 					muted
 					autoPlay
 					loop
 					typeof='video/mp4'
+				/>
+				<img
+					className='absolute top-0 left-0 h-screen w-screen object-cover z-[-1] visible md:invisible'
+					src='/assets/codaltec-icon.PNG'
+					alt='CODALTEC logo'
 				/>
 			</main>
 

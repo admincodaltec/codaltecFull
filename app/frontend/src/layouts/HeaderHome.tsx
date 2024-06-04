@@ -46,7 +46,7 @@ export default function HeaderHome() {
 	return (
 		<header>
 			<section className={styles.header__content}>
-				<div className='flex justify-between w-full container mx-auto py-2'>
+				<div className='flex justify-between relative w-full container mx-auto py-2'>
 					<nav className={styles.header__nav_desktop}>
 						<ul className='flex'>
 							<li className='flex items-center py-1 px-3'>
