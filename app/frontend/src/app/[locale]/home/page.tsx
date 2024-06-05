@@ -12,11 +12,8 @@ export const metadata: Metadata = {
 	title: 'Inicio',
 	alternates: {
 		canonical: 'https://codaltec.com/es/',
-		languages: {
-			es: 'https://codaltec.com/es/',
-			en: 'https://codaltec.com/en/',
-		},
 	},
+	robots: 'index, follow',
 };
 
 export default function Home() {
