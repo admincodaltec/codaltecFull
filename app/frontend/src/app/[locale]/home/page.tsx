@@ -11,7 +11,7 @@ import {Metadata} from 'next';
 export const metadata: Metadata = {
 	title: 'Inicio',
 	alternates: {
-		canonical: 'https://codaltec.com/es/',
+		canonical: 'https://www.codaltec.com/',
 	},
 	robots: 'index, follow',
 };

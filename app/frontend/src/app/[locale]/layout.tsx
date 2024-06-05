@@ -24,10 +24,10 @@ export const metadata: Metadata = {
 		title: 'CODALTEC | Corporación de Alta Tecnología',
 		description:
 			'Entidad Pública, de Derecho Privado, Sin Ánimo de Lucro, cuyo objeto social es el desarrollo, promoción y realización de actividades de ciencia, tecnología e innovación.',
-		url: 'https://codaltec.com',
+		url: 'https://www.codaltec.com',
 		images: [
 			{
-				url: 'https://codaltec.com/assets/Logos/Codaltec_Icono.svg',
+				url: 'https://www.codaltec.com/assets/Logos/Codaltec_Icono.svg',
 				width: 500,
 				height: 500,
 				alt: 'CODALTEC Logo',
