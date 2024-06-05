@@ -36,11 +36,10 @@ export default function HeaderHome() {
 	};
 
 	const switchEnglish = () => {
-		if (currentPath.includes('/es')) {
-			return currentPath.replace('/es', '/en');
-		} else {
-			return currentPath;
+		if (!currentPath.startsWith('/en')) {
+			return '/en' + currentPath;
 		}
+		return currentPath;
 	};
 
 	return (

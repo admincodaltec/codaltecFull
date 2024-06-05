@@ -21,7 +21,7 @@ export default function Welcome() {
 						<div className='flex flex-col gap-3 items-center justify-evenly md:flex-row'>
 							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 							<Link
-								href={'/es/home'}
+								href={'/home'}
 								className='flex flex-col justify-center items-center w-48 bg-transparent outline-none border-none cursor-pointer'
 							>
 								<h4 className='text-lg text-yellow-600 tracking-[.35rem]'>BIENVENIDO</h4>
