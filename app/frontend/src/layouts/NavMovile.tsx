@@ -13,45 +13,39 @@ export default function NavMovile() {
 			<nav>
 				<ul className={styles.header__nav_ul}>
 					<li>
-						<Link className={styles.header__movile_item} href={`/${currentLocale}/home/home`}>
+						<Link className={styles.header__movile_item} href={`/${currentLocale}/home`}>
 							{tHeader('inicio')}
 						</Link>
 					</li>
 					<li>
-						<Link className={styles.header__movile_item} href={`/${currentLocale}/home/about-us`}>
+						<Link className={styles.header__movile_item} href={`/${currentLocale}/about-us`}>
 							{tHeader('nosotros')}
 						</Link>
 					</li>
 					<li>
-						<Link className={styles.header__movile_item} href={`/${currentLocale}/home/portfolio`}>
+						<Link className={styles.header__movile_item} href={`/${currentLocale}/portfolio`}>
 							{tHeader('portafolio')}
 						</Link>
 					</li>
 					<li>
-						<Link className={styles.header__movile_item} href={`/${currentLocale}/home/posts`}>
+						<Link className={styles.header__movile_item} href={`/${currentLocale}/posts`}>
 							{tHeader('noticias')}
 						</Link>
 					</li>
 					<li>
-						<Link
-							className={styles.header__movile_item}
-							href={`/${currentLocale}/home/investigation`}
-						>
+						<Link className={styles.header__movile_item} href={`/${currentLocale}/investigation`}>
 							{tHeader('investigación')}
 						</Link>
 					</li>
 					<li>
-						<Link
-							className={styles.header__movile_item}
-							href={`/${currentLocale}/home/transparency`}
-						>
+						<Link className={styles.header__movile_item} href={`/${currentLocale}/transparency`}>
 							{tHeader('transparencia')}
 						</Link>
 					</li>
 					<li>
 						<Link
 							className={styles.header__movile_item}
-							href={`/${currentLocale}/home/atention-citizen`}
+							href={`/${currentLocale}/atention-citizen`}
 						>
 							{tHeader('atention')}
 						</Link>

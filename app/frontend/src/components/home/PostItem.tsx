@@ -13,7 +13,7 @@ const PostItem: React.FC<PostItemProps> = ({uri, image, title, isFirst}) => {
 	const currentLocale = useLocale();
 	return (
 		<Link
-			href={`/${currentLocale}/home/posts/${uri}`}
+			href={`/${currentLocale}/posts/${uri}`}
 			className={`relative rounded-lg z-0 ${
 				isFirst ? 'col-auto row-auto md:col-span-2 md:row-span-2' : 'col-span-1 row-span-1'
 			} hover:scale-105 transition-transform duration-300`}

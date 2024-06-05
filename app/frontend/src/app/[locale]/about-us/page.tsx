@@ -52,7 +52,7 @@ export default function Aboutus() {
 							<ul className='flex flex-col gap-5 my-5'>
 								<li>
 									<Link
-										href={`/${currentLocale}/home/about-us/more#nuestros-inicios`}
+										href={`/${currentLocale}/about-us/more#nuestros-inicios`}
 										className='text-white'
 									>
 										<h4 className='flex items-center text-xl font-semibold'>
@@ -62,10 +62,7 @@ export default function Aboutus() {
 									</Link>
 								</li>
 								<li>
-									<Link
-										href={`/${currentLocale}/home/about-us/more#organigrama`}
-										className='text-white'
-									>
+									<Link href={`/${currentLocale}/about-us/more#organigrama`} className='text-white'>
 										<h4 className='flex items-center text-xl font-semibold'>
 											<FaChevronRight className='text-yellow-500' /> {tAboutUs('organigrama')}
 										</h4>
@@ -73,10 +70,7 @@ export default function Aboutus() {
 									</Link>
 								</li>
 								<li>
-									<Link
-										href={`/${currentLocale}/home/about-us/more#directivos`}
-										className='text-white'
-									>
+									<Link href={`/${currentLocale}/about-us/more#directivos`} className='text-white'>
 										<h4 className='flex items-center text-xl font-semibold'>
 											<FaChevronRight className='text-yellow-500' /> {tAboutUs('directivos')}
 										</h4>

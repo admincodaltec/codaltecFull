@@ -19,7 +19,8 @@ services:
       - ./app/frontend:/home/node/app
     command: >
       bash -c "yarn install
-                npm run dev"
+                npm run build
+                npm run start"
     networks:
       - net-portal
 

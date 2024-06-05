@@ -24,16 +24,16 @@ export const metadata: Metadata = {
 		title: 'CODALTEC | Corporación de Alta Tecnología',
 		description:
 			'Entidad Pública, de Derecho Privado, Sin Ánimo de Lucro, cuyo objeto social es el desarrollo, promoción y realización de actividades de ciencia, tecnología e innovación.',
-		url: 'https://codaltec.com',
+		url: 'https://www.codaltec.com',
 		images: [
 			{
-				url: 'https://codaltec.com/assets/Logos/Codaltec_Icono.svg',
+				url: 'https://www.codaltec.com/assets/Logos/Codaltec_Icono.svg',
 				width: 500,
 				height: 500,
 				alt: 'CODALTEC Logo',
 			},
 		],
-		locale: 'es_ES',
+		locale: 'es',
 		type: 'website',
 	},
 	keywords: [
@@ -45,13 +45,7 @@ export const metadata: Metadata = {
 		'Simuladores',
 		'Ministerio de Defensa de Colombia',
 	],
-	alternates: {
-		canonical: '/es/home/home',
-		languages: {
-			'es-ES': 'https://codaltec.com/es/',
-			'en-US': 'https://codaltec.com/en/',
-		},
-	},
+
 	creator: 'Alejandro Forero Vanegas',
 	category: 'technology',
 };

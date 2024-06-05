@@ -10,6 +10,14 @@ import {Metadata} from 'next';
 
 export const metadata: Metadata = {
 	title: 'Inicio',
+	alternates: {
+		canonical: 'https://www.codaltec.com/home',
+		languages: {
+			'es-ES': 'https://www.codaltec.com/es/home',
+			'en-EN': 'https://www.codaltec.com/en/home',
+		},
+	},
+	robots: 'index, follow',
 };
 
 export default function Home() {
@@ -55,7 +63,7 @@ export default function Home() {
 								<br />
 								{tPosts('postHomeTitle2')}
 							</h2>
-							<Link className='text-white underline' href={'/es/home/home/posts'}>
+							<Link className='text-white underline' href={'/es/posts'}>
 								{tPosts('postLink')}
 							</Link>
 						</div>

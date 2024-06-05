@@ -29,17 +29,17 @@ export default function Transparency() {
 					</article>
 					<div className={`grid gap-6 justify-center px-12 ${styles.transparency__section}`}>
 						<CardTransparency
-							link='/home/transparency/contracts'
+							link='/transparency/contracts'
 							title={tTransparencia('contratacion')}
 							text={tTransparencia('contratacionDescription')}
 						/>
 						<CardTransparency
-							link='/home/transparency/internal-control'
+							link='/transparency/internal-control'
 							title={tTransparencia('control')}
 							text={tTransparencia('controlDescription')}
 						/>
 						<CardTransparency
-							link='/home/transparency/financials'
+							link='/transparency/financials'
 							title={tTransparencia('financiera')}
 							text={tTransparencia('financieraDescription')}
 						/>
