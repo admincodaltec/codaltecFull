@@ -7,22 +7,16 @@ import PostsSection from '@/layouts/PostsSection';
 import SlidersSection from '@/layouts/SlidersSection';
 import {useTranslations} from 'next-intl';
 import {Metadata} from 'next';
+import {useLocale} from 'next-intl';
 
 export const metadata: Metadata = {
 	title: 'Inicio',
-	alternates: {
-		canonical: 'https://www.codaltec.com/home',
-		languages: {
-			'es-ES': 'https://www.codaltec.com/es/home',
-			'en-EN': 'https://www.codaltec.com/en/home',
-		},
-	},
-	robots: 'index, follow',
 };
 
 export default function Home() {
 	const tProducts = useTranslations('productsHome');
 	const tPosts = useTranslations('postHome');
+	const currentLocale = useLocale();
 	return (
 		<>
 			<HeaderHome />
@@ -49,7 +43,7 @@ export default function Home() {
 						<div className='flex justify-center items-center w-full h-full'>
 							<img
 								className='object-contain'
-								src='/assets/lines.png'
+								src={currentLocale === 'en' ? '/assets/lines EN.png' : 'assets/lines ES.png'}
 								alt='Líneas de negocio CODALTEC'
 							/>
 						</div>

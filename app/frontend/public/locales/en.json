@@ -98,7 +98,8 @@
 		"controlTitle": "INTERNAL CONTROL",
 		"title": "TITLE",
 		"controlDate": "DATE",
-		"soport": "MEDIUM"
+		"soport": "MEDIUM",
+		"controlDescription": "CODALTEC develops the internal control system in a transversal manner in all activities, processes, procedures and policies associated with management, so that through its components it is possible to evaluate the effectiveness committed to continuous improvement."
 	},
 	"financial": {
 		"title": "FINANCIAL STATEMENT",
