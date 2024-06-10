@@ -11,20 +11,24 @@ const {
 const router = express.Router();
 const service = new UserService();
 
-router.get('/', async (req, res, next) => {
-  try {
-    const { email } = req.query;
-    if (email) {
-      const user = await service.findByEmail(email);
-      res.json(user);
-    } else {
-      const users = await service.find();
-      res.json(users);
+router.get(
+  '/',
+  validatorHandler(querySchema, 'query'),
+  async (req, res, next) => {
+    try {
+      const { email } = req.query;
+      if (email) {
+        const user = await service.findByEmail(email);
+        res.json(user);
+      } else {
+        const users = await service.find();
+        res.json(users);
+      }
+    } catch (error) {
+      next(error);
     }
-  } catch (error) {
-    next(error);
   }
-});
+);
 
 router.get(
   '/:id',
