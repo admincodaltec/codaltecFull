@@ -14,6 +14,9 @@ export async function getUserByEmail(email: string): Promise<User | null> {
 		if (!response.ok) {
 			throw new Error('Network response was not ok');
 		}
+        if (response.status === 404) {
+			return null;
+		}
 		const data = await response.json();
 		return data;
 	} catch (error) {

@@ -6,16 +6,12 @@ export async function POST(req: NextRequest) {
 		const {email, password} = await req.json();
 		const user = await getUserByEmail(email);
 
-		console.log('USUARIO', user);
-
 		if (!user) {
-			console.log('no se encontró el USER');
 			return NextResponse.json(
-				{success: false, message: 'User not found', data: user},
+				{success: false, message: 'User not found', data: null},
 				{status: 404}
 			);
 		} else {
-			console.log(user);
 			return NextResponse.json({success: true, data: user}, {status: 200});
 		}
 	} catch (error: any) {
