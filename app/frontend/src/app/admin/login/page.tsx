@@ -1,7 +1,7 @@
 'use client';
 
 import {useState} from 'react';
-import {getUserByEmail} from '@/services/UserServices';
+import {useGetUser} from '@/services/UsersServices';
 
 export default function Login() {
 	const [email, setEmail] = useState('');
@@ -10,7 +10,7 @@ export default function Login() {
 	const handleSubmit = async (e: {preventDefault: () => void}) => {
 		e.preventDefault();
 
-		const currentEmail = getUserByEmail(email);
+		const currentEmail = useGetUser(email);
 		console.log(currentEmail);
 		if (!currentEmail) {
 			alert('User not found');
