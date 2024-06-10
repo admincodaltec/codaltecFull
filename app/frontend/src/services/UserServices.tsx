@@ -6,7 +6,7 @@ export interface User {
 
 export async function getUserByEmail(email: string): Promise<User | null> {
 	try {
-		const response = await fetch(`https://codaltec.com/admin/users?email=${email}`);
+		const response = await fetch(`https://codaltec.com/apiback/v1/users?email=${email}`);
 		console.log(response);
 
 		if (!response.ok) {
