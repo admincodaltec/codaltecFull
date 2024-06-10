@@ -6,8 +6,6 @@ export interface User {
 
 export async function getUserByEmail(email: string): Promise<User | null> {
 	try {
-		console.log(`${process.env.API_URL}users?email=${email}`);
-
 		const response = await fetch(`${process.env.API_URL}users?email=${email}`);
 		console.log(response);
 

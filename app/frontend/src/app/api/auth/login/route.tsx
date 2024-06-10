@@ -6,6 +6,8 @@ export async function POST(req: NextRequest) {
 		const {email, password} = await req.json();
 		const user = await getUserByEmail(email);
 
+		console.log('PETICION', user);
+
 		if (!user) {
 			return NextResponse.json(
 				{success: false, message: 'User not found', data: null},
