@@ -1,5 +1,4 @@
 const express = require('express');
-const Joi = require('joi');
 
 const UserService = require('../services/user.service');
 const validatorHandler = require('../middlewares/validator.handler');
@@ -9,31 +8,23 @@ const {
   getUserSchema,
 } = require('../schemas/user.schema');
 
-const querySchema = Joi.object({
-  email: Joi.string().email().required(),
-});
-
 const router = express.Router();
 const service = new UserService();
 
-router.get(
-  '/',
-  validatorHandler(querySchema, 'query'),
-  async (req, res, next) => {
-    try {
-      const { email } = req.query;
-      if (email) {
-        const user = await service.findByEmail(email);
-        res.json(user);
-      } else {
-        const users = await service.find();
-        res.json(users);
-      }
-    } catch (error) {
-      next(error);
+router.get('/', async (req, res, next) => {
+  try {
+    const { email } = req.query;
+    if (email) {
+      const user = await service.findByEmail(email);
+      res.json(user);
+    } else {
+      const users = await service.find();
+      res.json(users);
     }
+  } catch (error) {
+    next(error);
   }
-);
+});
 
 router.get(
   '/:id',
