@@ -10,19 +10,17 @@ export default function Login() {
 	const handleSubmit = async (e: {preventDefault: () => void}) => {
 		e.preventDefault();
 
-		const fetchData = async () => {
-			try {
-				const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}users?email=${email}`);
-				if (!response.ok) {
-					throw new Error('Network response was not ok');
-				}
-				const data = await response.json();
-				setCurrentUser(data);
-				console.log(currentUser);
-			} catch (error) {
-				console.log(error);
+		try {
+			const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}users?email=${email}`);
+			if (!response.ok) {
+				throw new Error('Network response was not ok');
 			}
-		};
+			const data = await response.json();
+			setCurrentUser(data);
+			console.log(currentUser);
+		} catch (error) {
+			console.log(error);
+		}
 
 		if (!currentUser) {
 			alert('User not found');
