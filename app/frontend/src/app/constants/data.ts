@@ -31,3 +31,16 @@ export type IContract = {
 	date: string;
 	file: string;
 };
+
+export type IInternalControl = {
+	id: number;
+	name: string;
+	date: string;
+	file: string;
+};
+
+export type IFinancial = {
+	id: number;
+	name: string;
+	file: string;
+};

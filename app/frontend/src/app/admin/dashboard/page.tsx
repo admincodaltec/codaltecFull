@@ -1,7 +1,17 @@
+'use client';
+
 import {NavigationMenuDemo} from '@/layouts/admin/HeaderAdmin';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {useGetSliders} from '@/services/SliderServices';
+import {useGetPortafolio} from '@/services/PortfolioServices';
+import {useGetPosts} from '@/services/PostsServices';
+import {useGetContract} from '@/services/TransparencyServices';
 
 export default function Dashboard() {
+	const {sliders} = useGetSliders();
+	const {portafolios} = useGetPortafolio();
+	const {posts} = useGetPosts();
+	const {contracts} = useGetContract();
 	return (
 		<>
 			<NavigationMenuDemo />
@@ -27,7 +37,7 @@ export default function Dashboard() {
 							</svg>
 						</CardHeader>
 						<CardContent>
-							<div className='text-2xl font-bold'>1</div>
+							<div className='text-2xl font-bold'>{sliders.length}</div>
 							<p className='text-xs text-muted-foreground'>Subidos hasta el momento</p>
 						</CardContent>
 					</Card>
@@ -48,7 +58,7 @@ export default function Dashboard() {
 							</svg>
 						</CardHeader>
 						<CardContent>
-							<div className='text-2xl font-bold'>1</div>
+							<div className='text-2xl font-bold'>{portafolios.length}</div>
 							<p className='text-xs text-muted-foreground'>Subidos hasta el momento</p>
 						</CardContent>
 					</Card>
@@ -69,7 +79,7 @@ export default function Dashboard() {
 							</svg>
 						</CardHeader>
 						<CardContent>
-							<div className='text-2xl font-bold'>1</div>
+							<div className='text-2xl font-bold'>{posts.length}</div>
 							<p className='text-xs text-muted-foreground'>Subidas hasta el momento</p>
 						</CardContent>
 					</Card>
@@ -90,7 +100,7 @@ export default function Dashboard() {
 							</svg>
 						</CardHeader>
 						<CardContent>
-							<div className='text-2xl font-bold'>1</div>
+							<div className='text-2xl font-bold'>{contracts.length}</div>
 							<p className='text-xs text-muted-foreground'>Subidos hasta el momento</p>
 						</CardContent>
 					</Card>
