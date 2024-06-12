@@ -24,7 +24,7 @@ export const CellActions: React.FC<IcellActionsProps> = ({data, onDelete}) => {
 	const onConfirm = async () => {
 		setLoading(true);
 		try {
-			const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/business/${data.id}`, {
+			const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news/${data.id}`, {
 				method: 'DELETE',
 			});
 			if (!response.ok) {

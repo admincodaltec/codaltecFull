@@ -22,7 +22,7 @@ import {FaPlus} from 'react-icons/fa';
 import {Slider} from '@/app/constants/data';
 
 export default function Sliders() {
-	const {sliders, isLoading, error} = useGetSliders();
+	const {sliders} = useGetSliders();
 	const [sliderData, setSliderData] = useState<Slider[]>([]);
 
 	useEffect(() => {
@@ -45,10 +45,7 @@ export default function Sliders() {
 						description='Acá podras ver los sliders que estan disponibles'
 					/>
 
-					<Link
-						href={'/dashboard/employee/new'}
-						className={cn(buttonVariants({variant: 'default'}))}
-					>
+					<Link href={'/admin/sliders/new'} className={cn(buttonVariants({variant: 'default'}))}>
 						<FaPlus className='mr-2 h-4 w-4' /> Agregar Nuevo
 					</Link>
 				</div>

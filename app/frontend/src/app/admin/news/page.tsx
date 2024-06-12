@@ -45,10 +45,7 @@ export default function News() {
 						description='Acá podras ver las noticias que estan disponibles.'
 					/>
 
-					<Link
-						href={'/dashboard/employee/new'}
-						className={cn(buttonVariants({variant: 'default'}))}
-					>
+					<Link href={'/admin/news/new'} className={cn(buttonVariants({variant: 'default'}))}>
 						<FaPlus className='mr-2 h-4 w-4' /> Agregar Nuevo
 					</Link>
 				</div>

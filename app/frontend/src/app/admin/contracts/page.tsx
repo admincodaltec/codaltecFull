@@ -46,10 +46,7 @@ export default function Contracts() {
 						description='Acá podras ver los contratos que estan disponibles.'
 					/>
 
-					<Link
-						href={'/dashboard/employee/new'}
-						className={cn(buttonVariants({variant: 'default'}))}
-					>
+					<Link href={'/admin/contracts/new'} className={cn(buttonVariants({variant: 'default'}))}>
 						<FaPlus className='mr-2 h-4 w-4' /> Agregar Nuevo
 					</Link>
 				</div>

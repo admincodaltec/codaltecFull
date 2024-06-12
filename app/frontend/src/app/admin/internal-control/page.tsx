@@ -47,7 +47,7 @@ export default function InternalContronl() {
 					/>
 
 					<Link
-						href={'/dashboard/employee/new'}
+						href={'/admin/internal-control/new'}
 						className={cn(buttonVariants({variant: 'default'}))}
 					>
 						<FaPlus className='mr-2 h-4 w-4' /> Agregar Nuevo

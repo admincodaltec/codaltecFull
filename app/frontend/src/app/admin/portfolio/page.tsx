@@ -22,7 +22,7 @@ import {FaPlus} from 'react-icons/fa';
 import {Portafolio} from '@/app/constants/data';
 
 export default function Portfolio() {
-	const {portafolios, isLoading, error} = useGetPortafolio();
+	const {portafolios} = useGetPortafolio();
 	const [portafolioData, setPortafolioData] = useState<Portafolio[]>([]);
 
 	useEffect(() => {
@@ -45,10 +45,7 @@ export default function Portfolio() {
 						description='Acá podras ver las líneas de negocio que estan disponibles.'
 					/>
 
-					<Link
-						href={'/dashboard/employee/new'}
-						className={cn(buttonVariants({variant: 'default'}))}
-					>
+					<Link href={'/admin/portfolio/new'} className={cn(buttonVariants({variant: 'default'}))}>
 						<FaPlus className='mr-2 h-4 w-4' /> Agregar Nuevo
 					</Link>
 				</div>

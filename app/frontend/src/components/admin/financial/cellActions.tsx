@@ -24,12 +24,9 @@ export const CellActions: React.FC<IcellActionsProps> = ({data, onDelete}) => {
 	const onConfirm = async () => {
 		setLoading(true);
 		try {
-			const response = await fetch(
-				`${process.env.NEXT_PUBLIC_API_URL}/internal-control/${data.id}`,
-				{
-					method: 'DELETE',
-				}
-			);
+			const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/financial/${data.id}`, {
+				method: 'DELETE',
+			});
 			if (!response.ok) {
 				throw new Error('Failed to delete the slider');
 			}

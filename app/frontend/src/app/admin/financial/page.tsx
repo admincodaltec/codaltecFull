@@ -46,10 +46,7 @@ export default function Financial() {
 						description='Acá podras ver los archivos de la información financiera que estan disponibles.'
 					/>
 
-					<Link
-						href={'/dashboard/employee/new'}
-						className={cn(buttonVariants({variant: 'default'}))}
-					>
+					<Link href={'/admin/financial/new'} className={cn(buttonVariants({variant: 'default'}))}>
 						<FaPlus className='mr-2 h-4 w-4' /> Agregar Nuevo
 					</Link>
 				</div>

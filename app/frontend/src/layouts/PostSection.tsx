@@ -44,7 +44,7 @@ export default function Post({params}: PostProps) {
 					</p>
 				</div>
 			</section>
-			<section className={styles.post__content}>
+			<section className={`${styles.post__content} bg-[#2a2a2a]`}>
 				<div className='container py-5'>
 					<article className='text-white'>
 						<p>{currentLocale === 'es' ? post?.esDescription : post?.enDescription}</p>
