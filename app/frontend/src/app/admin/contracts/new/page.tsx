@@ -25,9 +25,12 @@ import Link from 'next/link';
 import {useState} from 'react';
 
 const formSchema = z.object({
-	file: z.instanceof(FileList).refine(files => files.length > 0, {
-		message: 'El archivo es requerido',
-	}),
+	file:
+		typeof window !== 'undefined'
+			? z.instanceof(FileList).refine(files => files.length > 0, {
+					message: 'El archivo es requerida',
+			  })
+			: z.any(),
 	purpose: z.string({message: 'El campo es requerido'}).min(4, {
 		message: 'El Título debe tener más de 4 caracteres.',
 	}),
