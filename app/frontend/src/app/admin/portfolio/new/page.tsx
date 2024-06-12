@@ -60,7 +60,9 @@ export default function Page() {
 		const dataFile = new FormData();
 		setIsLoading(true);
 
-		dataFile.append('icon', values.icon[0]);
+		dataFile.append('youtube', 'wwww.codaltec.com');
+
+		dataFile.append('image', values.icon[0]);
 		dataFile.append('esName', values.esName);
 		dataFile.append('enName', values.enName);
 		dataFile.append('esDescription', values.esDescription);
