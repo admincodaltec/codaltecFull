@@ -29,6 +29,7 @@ export default function InternalsSection() {
 							</div>
 							<div className='text-white px-4 text-center'>
 								<a
+									target='_blanck'
 									className='text-yellow-500 underline'
 									href={`${process.env.NEXT_PUBLIC_HOST_URL}/backend/public/documents/${item.file}`}
 									download={item.file}
