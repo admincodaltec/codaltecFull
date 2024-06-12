@@ -39,13 +39,13 @@ const formSchema = z.object({
 		.min(4, {
 			message: 'La descripción debe tener mas de 4 caracteres.',
 		})
-		.max(250, {message: 'La descripción debeter menos de 150 caracteres'}),
+		.max(500, {message: 'La descripción debeter menos de 150 caracteres'}),
 	enDescription: z
 		.string({message: 'El campo es requerido'})
 		.min(4, {
 			message: 'La descripción debe tener mas de 4 caracteres.',
 		})
-		.max(250, {message: 'La descripción debeter menos de 150 caracteres'}),
+		.max(500, {message: 'La descripción debeter menos de 150 caracteres'}),
 });
 
 export default function Page() {
