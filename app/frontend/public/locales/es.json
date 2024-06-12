@@ -98,7 +98,8 @@
 		"controlTitle": "CONTROL INTERNO",
 		"title": "TÍTULO",
 		"controlDate": "FECHA",
-		"soport": "SOPORTE"
+		"soport": "SOPORTE",
+		"controlDescription": "La Corporación de Alta Tecnología para la Defensa (CODALTEC) desarrolla el sistema de control interno de manera transversal en todas las actividades, procesos, procedimientos y políticas asociadas a la gestión, de manera que a través de sus componentes sea posible evaluar la efectividad comprometida con la mejora continúa."
 	},
 	"financial": {
 		"title": "ESTADO FINANCIERO",

@@ -13,7 +13,7 @@ const contract = require('./contract.router');
 
 function routerApi(app) {
   const router = express.Router();
-  app.use('/api/v1', router);
+  app.use('/apiback/v1', router);
   router.use('/users', userRouter);
   router.use('/news', newsRouter);
   router.use('/sliders', sliderRouter);

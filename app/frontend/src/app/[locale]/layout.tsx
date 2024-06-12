@@ -48,6 +48,9 @@ export const metadata: Metadata = {
 
 	creator: 'Alejandro Forero Vanegas',
 	category: 'technology',
+	alternates: {
+		canonical: 'https://www.codaltec.com',
+	},
 };
 
 export default async function RootLayout({

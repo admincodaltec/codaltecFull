@@ -20,19 +20,23 @@ export default function Contracts() {
 				<BannerHeader title={tTransparencia('contratacion')} />
 				<section className='container'>
 					<p className='text-white text-justify mb-6'>{tContracts('contractContact')}</p>
-					<div className='header grid grid-cols-3 border-b border-white pb-2'>
-						<div className='title text-center text-white text-2xl font-semibold'>
-							<h2>{tContracts('individualContract')}</h2>
+					<div className='overflow-x-scroll md:overflow-x-auto'>
+						<div className='min-w-[600px] '>
+							<div className='header grid grid-cols-3 border-b border-white pb-2'>
+								<div className='title text-center text-white text-2xl font-semibold'>
+									<h2>{tContracts('individualContract')}</h2>
+								</div>
+								<div className='title text-center text-white text-2xl font-semibold'>
+									<h2>{tContracts('date')}</h2>
+								</div>
+								<div className='title text-center text-white text-2xl font-semibold'>
+									<h2>{tContracts('documents')}</h2>
+								</div>
+							</div>
+							<div className='body py-4 '>
+								<ContractsSection />
+							</div>
 						</div>
-						<div className='title text-center text-white text-2xl font-semibold'>
-							<h2>{tContracts('date')}</h2>
-						</div>
-						<div className='title text-center text-white text-2xl font-semibold'>
-							<h2>{tContracts('documents')}</h2>
-						</div>
-					</div>
-					<div className='body py-4 min-w-[550px] overflow-x-hidden'>
-						<ContractsSection />
 					</div>
 				</section>
 			</main>

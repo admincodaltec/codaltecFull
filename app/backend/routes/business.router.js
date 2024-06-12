@@ -1,6 +1,7 @@
 const express = require('express');
 
 const BusinessService = require('../services/business.service');
+const uploadImage = require('../middlewares/multerProducts');
 const validatorHandler = require('../middlewares/validator.handler');
 const {
   updateBusinessSchema,
@@ -34,19 +35,22 @@ router.get(
   }
 );
 
-router.post(
-  '/',
-  validatorHandler(createBusinessSchema, 'body'),
-  async (req, res, next) => {
-    try {
-      const body = req.body;
-      const newCategory = await service.create(body);
-      res.status(201).json(newCategory);
-    } catch (error) {
-      next(error);
-    }
+router.post('/', uploadImage(), async (req, res, next) => {
+  try {
+    const body = req.body;
+    const newCategory = await service.create({
+      esName: body.esName,
+      enName: body.enName,
+      esDescription: body.esDescription,
+      enDescription: body.enDescription,
+      icon: req.file.filename,
+      youtube: body.youtube,
+    });
+    res.status(201).json(newCategory);
+  } catch (error) {
+    next(error);
   }
-);
+});
 
 router.patch(
   '/:id',

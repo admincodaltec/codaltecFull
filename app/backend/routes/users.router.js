@@ -13,8 +13,14 @@ const service = new UserService();
 
 router.get('/', async (req, res, next) => {
   try {
-    const categories = await service.find();
-    res.json(categories);
+    const { email } = req.query;
+    if (email) {
+      const user = await service.findByEmail(email);
+      res.json(user);
+    } else {
+      const users = await service.find();
+      res.json(users);
+    }
   } catch (error) {
     next(error);
   }
