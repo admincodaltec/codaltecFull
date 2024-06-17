@@ -92,7 +92,8 @@
 		"date": "DATE",
 		"backContracts": "BACK TO CONTRACTS",
 		"documents": "ATTACHED DOCUMENTS",
-		"contractContact": "Welcome to our contracts section! Here you can easily access and download contracts organized by year. Need something specific? Feel free to send us an email with the details of the contract you are looking for to info@codaltec.com. We're here to help - browse and download with confidence!"
+		"contractContact": "Welcome to our contracts section! Here you can easily access and download contracts organized by year. Need something specific? Feel free to send us an email with the details of the contract you are looking for to info@codaltec.com. We're here to help - browse and download with confidence!",
+		"contractManual": "Below you can download the Manual for procurement of goods, works and services."
 	},
 	"controlInterno": {
 		"controlTitle": "INTERNAL CONTROL",

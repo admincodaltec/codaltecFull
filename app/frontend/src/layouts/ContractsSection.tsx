@@ -1,6 +1,7 @@
 'use client';
 
-import {useGetContract} from '@/services/TransparencyServices';
+import { useGetContract } from '@/services/TransparencyServices';
+import { BsFillFileEarmarkPdfFill } from "react-icons/bs";
 import {FadeLoader} from 'react-spinners';
 
 export default function ContractsSection() {
@@ -36,11 +37,11 @@ export default function ContractsSection() {
 							<div className='text-white px-4 text-center'>
 								<a
 									target='_blanck'
-									className='text-yellow-500 underline'
+									className='text-yellow-500'
 									href={`${process.env.NEXT_PUBLIC_HOST_URL}/backend/public/documents/${item.file}`}
 									download={item.file}
 								>
-									{item.file}
+									<BsFillFileEarmarkPdfFill className='text-yellow-500 text-lg' />
 								</a>
 							</div>
 						</li>
