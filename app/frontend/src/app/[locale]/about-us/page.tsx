@@ -50,9 +50,9 @@ export default function Aboutus() {
 				</section>
 				<section className='bg-[#1A1A1A]'>
 					<div className="container mx-auto">
-						<article className='flex flex-col items-center justify-center py-4'>
+						<article className='flex flex-col items-center justify-center pt-2 pb-6'>
 							<h2 className='text-2xl font-bold text-center text-yellow-500'>{tAboutUs('manualIdentidad')}</h2>
-							<p className='text.white text-base text-center my-3'>{tAboutUs('manualIdentidadDescription')}</p>
+							<p className='text-white text-base text-center my-3'>{tAboutUs('manualIdentidadDescription')}</p>
 							<a href='https://drive.google.com/drive/folders/1NDrULT8O1rxavk2mKpIjqbKMMPfidKIx' target='_blank' className={cn(buttonVariants({variant: 'secondary'}))}>
 								{tAboutUs('manualIdentidadLink')}
 							</a>
