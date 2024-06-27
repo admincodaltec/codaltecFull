@@ -35,16 +35,7 @@ export default function Aboutus() {
 						</article>
 					</div>
 				</section>
-				<section>
-					<div className="bg-[#1A1A1A] container mx-auto">
-						<article className='flex flex-col items-center justify-center py-4'>
-							<h2 className='text-xl font-bold text-center text-yellow-500'>{tAboutUs('manualIdentidad')}</h2>
-							<a href='https://drive.google.com/drive/folders/1NDrULT8O1rxavk2mKpIjqbKMMPfidKIx' target='_blank' className={cn(buttonVariants({variant: 'secondary'}))}>
-								{tAboutUs('manualIdentidadLink')}
-							</a>
-						</article>
-					</div>
-				</section>
+				
 				<section className={styles.values}>
 					<div className={`${styles.values__container} container mx-auto`}>
 						<article>
@@ -54,6 +45,17 @@ export default function Aboutus() {
 						<article>
 							<h2 className='text-2xl font-bold text-yellow-500'>{tAboutUs('vision')}</h2>
 							<p className='text-white text-base text-justify'>{tAboutUs('visionDescription')}</p>
+						</article>
+					</div>
+				</section>
+				<section className='bg-[#1A1A1A]'>
+					<div className="container mx-auto">
+						<article className='flex flex-col items-center justify-center py-4'>
+							<h2 className='text-2xl font-bold text-center text-yellow-500'>{tAboutUs('manualIdentidad')}</h2>
+							<p className='text.white text-base text-center my-3'>{tAboutUs('manualIdentidadDescription')}</p>
+							<a href='https://drive.google.com/drive/folders/1NDrULT8O1rxavk2mKpIjqbKMMPfidKIx' target='_blank' className={cn(buttonVariants({variant: 'secondary'}))}>
+								{tAboutUs('manualIdentidadLink')}
+							</a>
 						</article>
 					</div>
 				</section>
