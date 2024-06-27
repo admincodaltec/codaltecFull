@@ -33,10 +33,10 @@ const formSchema = z.object({
 			: z.any(),
 	esTitle: z.string({message: 'El campo es requerido'}).min(4, {
 		message: 'El Título debe tener mas de 4 caracteres.',
-	}),
+	}).max(64, {message: 'El Título debe tener menos de 64 caractere'}),
 	enTitle: z.string({message: 'El campo es requerido'}).min(4, {
 		message: 'El Título debe tener mas de 4 caracteres.',
-	}),
+	}).max(64, {message: 'El Título debe tener menos de 64 caractere'}),
 	esDescription: z
 		.string({message: 'El campo es requerido'})
 		.min(4, {
@@ -118,7 +118,7 @@ export default function Page() {
 									<FormControl>
 										<Input type='file' placeholder='shadcn' {...fileRef} />
 									</FormControl>
-									<FormDescription>Imagen que aparecera para la noticia.</FormDescription>
+									<FormDescription>La imagen debe pesar menos de 1MB.</FormDescription>
 									<FormMessage />
 								</FormItem>
 							)}

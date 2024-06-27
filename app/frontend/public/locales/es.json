@@ -92,7 +92,8 @@
 		"date": "FECHA",
 		"backContracts": "VOLVER A CONTRATOS",
 		"documents": "DOCUMENTOS ADJUNTOS",
-		"contractContact": "¡Bienvenido/a a nuestra sección de contratos! Aquí podrás acceder y descargar fácilmente los contratos organizados por año. ¿Necesitas  algo específico? No dudes en enviarnos un correo electrónico con los detalles del contrato que buscas a info@codaltec.com. Estamos aquí para ayudarte. ¡Explora y descarga con confianza!"
+		"contractContact": "¡Bienvenido/a a nuestra sección de contratos! Aquí podrás acceder a información relacionada con contratos. ¿Necesitas  algo específico? No dudes en enviarnos un correo electrónico con los detalles del contrato que buscas a info@codaltec.com. Estamos aquí para ayudarte. ¡Explora y descarga con confianza!",
+		"contractManual": "A continuación podras descargar el Manual para adquisición de bienes obras y servicios."
 	},
 	"controlInterno": {
 		"controlTitle": "CONTROL INTERNO",
@@ -119,7 +120,7 @@
 		"horario": "HORARIO DE ATENCIÓN",
 		"horarioDias": "Lunes a Viernes 8:00 a. m. - 12:00 p. m. 1:00 p. m. - 5:00 p. m.",
 		"bogota": "Oficina Principal: Bogotá (Carrera 38 No. 25B - 27 Pisos 3 - 4)",
-		"villavicencio": "Oficina Secundaria: Villavicencio (Avenida 40 No. 24A - 71 Piso 3) ",
+		"villavicencio": "Oficina Villavicencio (Avenida 40 No. 24A - 71 Piso 3) ",
 		"direccion": "DIRECCIÓN",
 		"siguenos": "SIGUENOS"
 	},

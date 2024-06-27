@@ -31,7 +31,7 @@ const PostsSection: React.FC<PostsSectionProps> = ({maxPostsToShow, ulClassName}
 				</div>
 			) : maxPostsToShow ? (
 				<ul className={ulClassName}>
-					{posts.slice(0, maxPostsToShow).map((article, index) => (
+					{posts.reverse().slice(0, maxPostsToShow).map((article, index) => (
 						<PostItem
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							key={article.id}
@@ -46,7 +46,7 @@ const PostsSection: React.FC<PostsSectionProps> = ({maxPostsToShow, ulClassName}
 				</ul>
 			) : (
 				<ul className={ulClassName}>
-					{posts.slice(0, maxPostsToShow).map((article, index) => (
+					{posts.reverse().slice(0, maxPostsToShow).map((article, index) => (
 						<PostItem
 							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							key={article.id}

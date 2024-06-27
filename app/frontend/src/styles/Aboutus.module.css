@@ -5,6 +5,7 @@
 	background-size: cover;
 	padding: 50px 0px 30px;
 }
+
 .aboutus__container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -12,24 +13,29 @@
 	justify-content: flex-end;
 	align-items: center;
 }
+
 .aboutus__article {
 	grid-column-start: 2;
 	margin: 30px 0px 0px;
 }
+
 .aboutus__article_text {
 	padding: 20px;
 	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 8px;
 }
+
 .values {
-	background-color: var(--black);
+	background-color: #1A1A1A;
 	padding: 40px 0px;
 }
+
 .values__container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 30px;
 }
+
 .aboutus__end {
 	background-image: url('../../public/assets/BG_Lineas-de-Negocio.png');
 	background-position: center;
@@ -37,21 +43,25 @@
 	background-repeat: no-repeat;
 	padding: 40px 0px;
 }
+
 .aboutus__end_container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
 }
+
 .aboutus__menu {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
+
 .aboutus__map {
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
 }
+
 .aboutus__map_sub {
 	display: flex;
 	flex-direction: column;
@@ -61,8 +71,9 @@
 /*   			MORE ABOUT US  				*/
 
 .moreabout__page {
-	background-color: var(--black);
+	background-color: #1A1A1A;
 }
+
 .moreabout__page_header {
 	background-image: url('../../public/assets/BG_lineas.png');
 	background-position: center;
@@ -70,11 +81,13 @@
 	background-repeat: no-repeat;
 	padding: 20px 0px;
 }
+
 .moreabout__page_container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
+
 .moreabout__page_directives {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -87,6 +100,7 @@
 	.aboutus {
 		background-position: 0px 0px;
 	}
+
 	.aboutus__container,
 	.values__container,
 	.aboutus__end_container,

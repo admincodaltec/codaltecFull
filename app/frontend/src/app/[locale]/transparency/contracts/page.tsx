@@ -4,7 +4,8 @@ import FooterHome from '@/layouts/FooterHome';
 import BannerHeader from '@/components/home/BannerHeader';
 import styles from '@/styles/Transparency.module.css';
 import {useTranslations} from 'next-intl';
-import {Metadata} from 'next';
+import { Metadata } from 'next';
+import { BsFillFileEarmarkPdfFill } from "react-icons/bs";
 
 export const metadata: Metadata = {
 	title: 'Contratación',
@@ -19,7 +20,16 @@ export default function Contracts() {
 			<main className={`${styles.transparency__content} min-h-[80vh]`}>
 				<BannerHeader title={tTransparencia('contratacion')} />
 				<section className='container'>
-					<p className='text-white text-justify mb-6'>{tContracts('contractContact')}</p>
+					<p className='text-white text-justify '>{tContracts('contractContact')}</p>
+					<br />
+					<p className='text-white text-justify mb-6'>{tContracts('contractManual')}</p>
+					<a
+						className='text-yellow-500'
+						href={'/assets/Manual.pdf'}
+						download={'Manual para la adquisición de bienes'}
+					>
+						<BsFillFileEarmarkPdfFill className='text-yellow-500 text-lg' />
+					</a>
 					<div className='overflow-x-scroll md:overflow-x-auto'>
 						<div className='min-w-[600px] '>
 							<div className='header grid grid-cols-3 border-b border-white pb-2'>

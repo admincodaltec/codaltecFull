@@ -317,7 +317,7 @@ export default function Atention() {
 			</Modal>
 
 			<main className={`${styles.transparency__content} min-h-[60vh]`}>
-				<BannerHeader title='ATENCIÓN AL CLEINTE' />
+				<BannerHeader title='ATENCIÓN AL CLIENTE' />
 				<section className='container py-6'>
 					<article className='p-4 bg-black rounded-lg'>
 						<p className='text-white'>
