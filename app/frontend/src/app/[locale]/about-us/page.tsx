@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import HeaderHome from '@/layouts/HeaderHome';
 import FooterHome from '@/layouts/FooterHome';
+import { buttonVariants } from '@/components/ui/button';
 import styles from '@/styles/Aboutus.module.css';
 import {FaChevronRight} from 'react-icons/fa';
 import {Metadata} from 'next';
 import {useTranslations} from 'next-intl';
 import {useLocale} from 'next-intl';
+import {cn} from '@/lib/utils';
 
 export const metadata: Metadata = {
 	title: 'Nosotros',
@@ -30,6 +32,16 @@ export default function Aboutus() {
 									{tAboutUs('aboutUsDescription')}
 								</p>
 							</div>
+						</article>
+					</div>
+				</section>
+				<section>
+					<div className="bg-[#1A1A1A] container mx-auto">
+						<article className='flex flex-col items-center justify-center py-4'>
+							<h2 className='text-xl font-bold text-center text-yellow-500'>{tAboutUs('manualIdentidad')}</h2>
+							<a href='https://drive.google.com/drive/folders/1NDrULT8O1rxavk2mKpIjqbKMMPfidKIx' target='_blank' className={cn(buttonVariants({variant: 'secondary'}))}>
+								{tAboutUs('manualIdentidadLink')}
+							</a>
 						</article>
 					</div>
 				</section>
